@@ -1,0 +1,20 @@
+---
+title:     RubyHiroba 2013
+bodyclass: blog
+---
+
+%h1.logo2=image_tag('/images/logo2.png')
+
+= partial 'nav'
+
+.wrapper
+  .container
+    %article.article
+      .intro
+        - blog.articles[0...5].each do |article|
+          %article
+            %h1
+              %a{:href => article.url}= article.title
+              %time= article.date.strftime('%b %e %Y')
+            = article.summary
+            %a{:href => article.url} more read...
