@@ -1,0 +1,182 @@
+//
+// Magic (Responsive) Susy Grid System
+//
+
+$show-grid-backgrounds: true
+
+@import "susy"
+
+// For full Susy documentation, visit: http://susy.oddbird.net/tutorial/
+
+// Define mobile-first grid constants.
+$total-columns      : 6
+// You can use ems, px or % to define the grid.
+$column-width       : 60px
+$gutter-width       : 20px
+$grid-padding       : $gutter-width / 2
+
+// Define breakpoints, in this case when there's room for the specified columns.
+$break-phone: 4
+$break-tablet:   8
+$break-desktop: 12
+$break-huge:    16
+
+.container
+  // Include `container` if this element will contain a grid system.
+  @include container($total-columns)
+  // Apply our grid background stripes for development.
+  // @include susy-grid-background
+
+header, #main-content, footer
+  // Clearfix for full-width elements
+  @include clearfix
+
+// Automatically reset the grid width & re-apply the grid background
+// to responsive layouts.
+$layouts: $break-tablet, $break-desktop, $break-huge
+@each $layout in $layouts
+  @include at-breakpoint($layout)
+    .container
+      @include set-container-width
+      // @include susy-grid-background
+
+@include at-breakpoint($break-phone)
+  .header
+    @include span-columns(4)
+    .header_img
+      @include span-columns(4 omega, 4)
+    .header_text
+      @include span-columns(4 omega, 4)
+  .nav
+    @include span-columns(4)
+    .home
+      @include span-columns(2, 4)
+    .detail
+      @include span-columns(2 omega, 4)
+    .schedule
+      @include span-columns(2, 4)
+    .tickets
+      @include span-columns(2 omega, 4)
+    .access
+      @include span-columns(2, 4)
+    .team
+      @include span-columns(2 omega, 4)
+
+@include at-breakpoint($break-tablet)
+  .header
+    @include span-columns(8)
+    .header_img
+      @include span-columns(4, 8)
+    .header_text
+      @include span-columns(4 omega, 8)
+  .nav
+    @include span-columns(8)
+    .home
+      @include span-columns(2, 8)
+    .detail
+      @include span-columns(2, 8)
+    .schedule
+      @include span-columns(2 omega, 8)
+    .tickets
+      @include span-columns(2, 8)
+    .access
+      @include span-columns(2, 8)
+    .team
+      @include span-columns(2, 8)
+  .workshop
+    @include span-columns(8)
+    .p4d
+      @include span-columns(4, 8)
+    .tutorial
+      @include span-columns(4 omega, 8)
+    .railsgirls
+      @include span-columns(4, 8)
+    .ltthon
+      @include span-columns(4 omega, 8)
+  .moreinfo
+    @include span-columns(8)
+    .tickets
+      @include span-columns(8, 8)
+    .access
+      @include span-columns(8, 8)
+
+@include at-breakpoint($break-desktop)
+  .header
+    @include span-columns(12, 12)
+    .header_img
+      @include span-columns(6, 12)
+    .header_text
+      @include span-columns(6 omega, 12)
+  .nav
+    @include span-columns(12)
+    .home
+      @include span-columns(2, 12)
+    .detail
+      @include span-columns(2, 12)
+    .schedule
+      @include span-columns(2, 12)
+    .tickets
+      @include span-columns(2, 12)
+    .access
+      @include span-columns(2 , 12)
+    .team
+      @include span-columns(2 omega, 12)
+  .workshop
+    @include span-columns(12, 12)
+    .p4d
+      @include span-columns(3, 12)
+    .tutorial
+      @include span-columns(3, 12)
+    .railsgirls
+      @include span-columns(3, 12)
+    .ltthon
+      @include span-columns(3 omega, 12)
+  .moreinfo
+    @include span-columns(12, 12)
+    .tickets
+      @include span-columns(6, 12)
+    .access
+      @include span-columns(6 omega, 12)
+
+@include at-breakpoint($break-huge)
+  .header
+    @include span-columns(16, 16)
+    .header_img
+      @include span-columns(8, 16)
+    .header_text
+      @include span-columns(8 omega, 16)
+  .nav
+    @include span-columns(16, 16)
+    .home
+      @include span-columns(2, 16)
+    .detail
+      @include span-columns(3, 16)
+    .schedule
+      @include span-columns(3, 16)
+    .tickets
+      @include span-columns(3, 16)
+    .access
+      @include span-columns(3, 16)
+    .team
+      @include span-columns(2 omega, 16)
+  .workshop
+    @include span-columns(16, 16)
+    .p4d
+      @include span-columns(4, 16)
+    .tutorial
+      @include span-columns(4, 16)
+    .railsgirls
+      @include span-columns(4, 16)
+    .ltthon
+      @include span-columns(4 omega, 16)
+  .moreinfo
+    @include span-columns(16, 16)
+    .tickets
+      @include span-columns(8, 16)
+    .access
+      @include span-columns(8 omega, 16)
+
+
+
+
+
