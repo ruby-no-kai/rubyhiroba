@@ -44,9 +44,11 @@ $layouts: $break-tablet, $break-desktop, $break-huge
   .header
     @include span-columns(4)
     .header_img
-      @include span-columns(4 omega, 4)
+      @include span-columns(2, 4)
     .header_text
-      @include span-columns(4 omega, 4)
+      @include span-columns(2 omega, 4)
+    .sns
+      @include span-columns(4, 4)
   .nav
     @include span-columns(4)
     .home
@@ -69,6 +71,8 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(4, 8)
     .header_text
       @include span-columns(4 omega, 8)
+    .sns
+      @include span-columns(8 omega, 8)
   .nav
     @include span-columns(8)
     .home
@@ -107,6 +111,8 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(6, 12)
     .header_text
       @include span-columns(6 omega, 12)
+    .sns
+      @include span-columns(12 omega, 12)
   .nav
     @include span-columns(12)
     .home
@@ -145,6 +151,8 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(8, 16)
     .header_text
       @include span-columns(8 omega, 16)
+    .sns
+      @include span-columns(16 omega, 16)
   .nav
     @include span-columns(16, 16)
     .home
