@@ -16,15 +16,7 @@ bodyclass: index
       Tweet</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-%nav#header_navi
-  .container
-    %ul.nav
-      %li.home= link_to "HOME", "/"
-      %li.detail= link_to "BLOG", "blog.html"
-      %li.schedule= link_to "SCHEDULE", "schedule.html"
-      %li.tickets= link_to "TICKETS", "#tickets"
-      %li.access= link_to "ACCESS", "#access"
-      %li.team= link_to "TEAM", "#team"
+= partial 'nav'
 
 .wrapper
   .container
