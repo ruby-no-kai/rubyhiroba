@@ -28,6 +28,8 @@ $base-color: #E3E0C9
 $main-color: #212F53
 $accent-color: #B35711
 
+$small: "only screen and (max-width:620px)"
+
 .welcome
   -webkit-animation-name: welcome
   -webkit-animation-duration: .9s
@@ -127,8 +129,10 @@ header
   margin: 0 auto 2%
   hgroup
     text-align: right
-    margin: 5% auto
+    margin: 5% auto 0
     letter-spacing: 0.1em
+    @media #{$small}
+      letter-spacing: 0.05em
     h1
       margin: 0
       padding: 0
@@ -136,14 +140,20 @@ header
       margin: 5% 0 0 0
       padding: 0
       font-size: 150%
+      @media #{$small}
+        font-size: 100%
       .date
         font-size: 200%
         color: $accent-color
+        @media #{$small}
+          font-size: 100%
     p
       margin: 0
       font-size: 109%
       letter-spacing: 0.05em
       font-weight: bold
+      @media #{$small}
+        font-size: 83%
   .header_img
     margin-top: 8%
     text-align: center
@@ -157,19 +167,21 @@ header
   //   position: relative
 
 .sns
-  margin: 1% 0
+  margin: 0 0 1% 0
   padding: 0
   display: block
+  @media #{$small}
+    display: inline-block
   .twitter-share-button
-    display: inline
-    float: right
+    display: block
     margin: 0
     padding: 2px 0 0 0
-  .fb-like
-    display: inline
     float: right
+  .fb-like
+    display: block
     margin: 0
     padding: 0
+    float: right
 
 .logo2
   text-align: center
@@ -199,6 +211,8 @@ header
       font-size: 120%
       letter-spacing: 0.2em
       list-style: none
+      @media #{$small}
+        font-size: 100%
       a
         display: block
         -webkit-transition: all 0.5s ease
