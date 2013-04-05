@@ -1,0 +1,244 @@
+//
+// Main Stylesheet
+//
+
+@import "compass"
+@import "h5bp"
+
+// HTML5 Boilerplate Styles
+@include h5bp-normalize
+@include h5bp-base-styles
+
+// HTML5 Boilerplate styling for Chrome Frame
+@include h5bp-chromeframe
+
+// Susy Grid Systems - choose one to customize
+// @import "grid/fixed"
+@import "grid/magic"
+
+// Your own styles go here.
+$white: #FFFFFF
+$black: #200B18
+$text: #5C682E
+$blue: #007AB7
+$lblue: #45A1CF
+$green: #009250
+$lgreen: #acde61
+$base-color: #E3E0C9
+$main-color: #212F53
+$accent-color: #B35711
+
+$small: "only screen and (max-width:620px)"
+
+.welcome
+  -webkit-animation-name: welcome
+  -webkit-animation-duration: .9s
+@-webkit-keyframes welcome
+  from
+    -webkit-transform: scale(0)
+    opacity: 0
+  50%
+    -webkit-transform: scale(0)
+    opacity: 0
+  82.5%
+    -webkit-transform: scale(1.03)
+    -webkit-animation-timing-function: ease-out
+    opacity: 1
+  to
+    -webkit-transform: scale(1)
+
+.welcome2
+  -webkit-animation-name: welcome2
+  -webkit-animation-duration: 0.5s
+@-webkit-keyframes welcome2
+  from
+    -webkit-transform: scale(0)
+    opacity: 0
+  50%
+    -webkit-transform: scale(0)
+    opacity: 0
+  82.5%
+    -webkit-transform: scale(1.03)
+
+body
+  font-size: 16px
+  font-family: 'PT Sans', "Meiryo", "メイリオ", sans-serif
+  *font-size: 82%
+  background: $base-color
+  line-height: 1.5
+  word-break: break-all
+  -webkit-text-size-adjust: none
+  word-break: normal
+  color: #3e3e29
+  letter-spacing: 0.05em
+  color: $main-color
+html:lang(ja)
+  body
+    .access
+      font-size: 13px
+      letter-spacing: 0.1em
+.ja
+  font-size: 13px
+  letter-spacing: 0.1em
+
+h1
+  line-height: 1em
+h2
+  line-height: 1.84615em
+  font-size: 1.63em
+footer
+  margin-top: 3em
+  text-align: center
+
+.container
+  // Force images to scale down to their container widths.
+  img
+    max-width: 100%
+    height: auto
+
+.layout
+  width: 100%
+
+.wrapper
+  background-color: rgba(255, 255, 255, 0.8)
+  +clearfix
+  width: 100%
+
+.article
+  h1,h2,h3
+    color: $accent-color
+
+.workshop
+  text-align: center
+  h2
+    text-align: left
+    color: $accent-color
+  p
+    text-align: left
+
+// H5BP helper classes & mixins.
+// @include h5bp-helpers
+
+// Print styles.
+@include h5bp-media
+
+.image
+
+header
+  +clearfix
+  margin: 0 auto 2%
+  hgroup
+    text-align: right
+    margin: 5% auto 0
+    letter-spacing: 0.1em
+    @media #{$small}
+      letter-spacing: 0.05em
+    h1
+      margin: 0
+      padding: 0
+    h2
+      margin: 5% 0 0 0
+      padding: 0
+      font-size: 150%
+      @media #{$small}
+        font-size: 100%
+      .date
+        font-size: 200%
+        color: $accent-color
+        @media #{$small}
+          font-size: 100%
+    p
+      margin: 0
+      font-size: 109%
+      letter-spacing: 0.05em
+      font-weight: bold
+      @media #{$small}
+        font-size: 83%
+  .header_img
+    margin-top: 8%
+    text-align: center
+
+.fixed
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  // @media #{$small}
+  //   position: relative
+
+.sns
+  margin: 0 0 1% 0
+  padding: 0
+  display: block
+  @media #{$small}
+    display: inline-block
+  .twitter-share-button
+    display: block
+    margin: 0
+    padding: 2px 0 0 0
+    float: right
+  .fb-like
+    display: block
+    margin: 0
+    padding: 0
+    float: right
+
+.logo2
+  text-align: center
+  img
+    width: 50%
+
+#header_navi
+  background: $main-color
+  +clearfix
+  width: 100%
+  a
+    +link-colors($white, tint($accent-color,30), $white, $white, $white)
+    text-decoration: none
+    font-weight: bold
+  &:hover
+    background-color: alpha
+  ul
+    margin: 0
+    padding: 0
+    line-height: 2.0
+    display: block
+    background: $main-color
+    +clearfix
+    li
+      color: $white
+      text-align: center
+      font-size: 120%
+      letter-spacing: 0.2em
+      list-style: none
+      @media #{$small}
+        font-size: 100%
+      a
+        display: block
+        -webkit-transition: all 0.5s ease
+        -moz-transition: all 0.5s ease
+        -o-transition: all 0.5s ease
+        -ms-transition: all 0.5s ease
+        transition: all 0.5s ease
+
+.article
+  a
+    +link-colors($accent-color, $green, $green, $accent-color, $accent-color)
+
+#page-top
+  font-size: 14px
+  position: fixed
+  right: 50px
+  bottom: 50px
+  z-index: 100
+  a
+    padding: 10px
+    display: block
+    opacity: 1
+    background: $main-color
+    text-decoration: none
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    +link-colors($white, t$white, $white, $white, $white)
+    &:hover
+      background: $accent-color
