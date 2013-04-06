@@ -12,7 +12,7 @@ bodyclass: blog
     %article.article
       .main
         - blog.articles[0...5].each do |article|
-          %h1
+          %h2
             %a{:href => article.url}= article.title
           %p.date
             %time= article.date.strftime('%b %e %Y')
