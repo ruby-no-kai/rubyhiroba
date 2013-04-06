@@ -121,4 +121,5 @@ activate :blog do |blog|
   blog.prefix = "blog"
   blog.per_page = 5
   blog.paginate = true
+  blog.layout = "layouts/blog_layout"
 end
