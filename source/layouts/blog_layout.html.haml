@@ -47,7 +47,7 @@
         %article.article
           .main
             - blog.articles[0...1].each do |article|
-              %h1
+              %h2
                 = article.title
               %p.date
                 %time= article.date.strftime('%b %e %Y')
