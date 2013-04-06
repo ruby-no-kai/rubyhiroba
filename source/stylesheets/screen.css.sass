@@ -225,10 +225,24 @@ header
 
 .article
   min-height: 800px
+  padding: 2% 0
   @media #{$small}
     min-height: auto
   a
     +link-colors($accent-color, $green, $green, $accent-color, $accent-color)
+
+.main
+  .date
+    font-weight: bold
+.side
+  list-style: none
+  ul
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      margin: 0
+      padding: 0 0 2% 0
 
 #page-top
   font-size: 14px
