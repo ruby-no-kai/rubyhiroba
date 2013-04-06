@@ -1,0 +1,85 @@
+!!! 5
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7]    <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8]    <html class="no-js lt-ie9">
+<!--[if gt IE 8]><!-->
+%html{:class => "no-js", :lang => "en"}
+  <!--<![endif]-->
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:lang => "ja"}
+    %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge,chrome=1"}
+
+    -# Pull in the page title
+    %title= current_page.data.title
+
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "author", :content => ""}
+    %link{ rel: "apple-touch-icon", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "114x114", href: "apple-touch-icon-114x114-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "72x72", href: "apple-touch-icon-72x72-precomposed.png" }
+    %link{ rel: "apple-touch-icon", href: "apple-touch-icon-precomposed.png" }
+    %link{ rel: "shortcut icon", href: "favicon.png" }
+    / should actually be placed in your root dir
+    %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
+    -# You may wish to remove the 'initial scale=1.0' for non-responsive layouts
+    %meta{:name => "viewport", :content => "width=device-width; initial-scale=1.0"}
+
+    -# Place favicon.ico and apple-touch-icon.png in the root directory
+
+    = stylesheet_link_tag "screen", "http://fonts.googleapis.com/css?family=PT+Sans"
+    = javascript_include_tag "libs/modernizr-2.6.1.min", "facebook", "mylibs/html5", "mylibs/pagetop", "mylibs/selectivizr-min", "mylibs/smoothScroll", "mylibs/hover"
+
+  %body{:class => current_page.data.bodyclass}
+    <div id="fb-root"></div>
+    /[if lt IE 7]
+      %p.chromeframe
+        You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
+
+      #main-content{:role => "main"}
+
+    %h1.logo2=image_tag('/images/logo2.png')
+
+    = partial 'nav'
+
+    .wrapper
+      .container
+        %article.article
+          .main
+            - blog.articles[0...1].each do |article|
+              %h2
+                = article.title
+              %p.date
+                %time= article.date.strftime('%b %e %Y')
+              = yield
+
+          .side
+            %ul
+            - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+              %li
+                %h3= year
+                %ul
+                  - articles.each do |article|
+                    %li
+                      %a{:href => article.url}= article.title
+
+      %footer
+        %p#page-top=link_to "PAGE TOP", "#header"
+        %p &copy; #{copyright_years(2013)} RubyHiroba
+
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
+    :javascript
+      window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.9.0.min.js"><\/script>')
+
+    -# Holder.js - canvas-generated placeholder images for prototyping
+    = javascript_include_tag "libs/holder"
+
+    = javascript_include_tag "plugins", "script"
+
+    -# Google Analytics: change UA-XXXXX-X to be your site's ID.
+    -# uncomment when deploying
+    / :javascript
+    /   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    /   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    /   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    /   s.parentNode.insertBefore(g,s)}(document,'script'));

@@ -12,18 +12,17 @@ bodyclass: blog
     %article.article
       .main
         - blog.articles[0...5].each do |article|
-          %h2
+          %h1
             %a{:href => article.url}= article.title
-          %p.date
             %time= article.date.strftime('%b %e %Y')
-          = article.summary
+          = yield
           %a{:href => article.url} more read...
 
       .side
         %ul
         - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
           %li
-            %h3= year
+            %h5= year
             %ul
               - articles.each do |article|
                 %li
