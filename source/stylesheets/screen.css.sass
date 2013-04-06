@@ -222,6 +222,9 @@ header
         transition: all 0.5s ease
 
 .article
+  min-height: 800px
+  @media #{$small}
+    min-height: auto
   a
     +link-colors($accent-color, $green, $green, $accent-color, $accent-color)
 
@@ -231,6 +234,8 @@ header
   right: 50px
   bottom: 50px
   z-index: 100
+  @media #{$small}
+    display: none
   a
     padding: 10px
     display: block
