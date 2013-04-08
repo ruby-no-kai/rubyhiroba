@@ -30,7 +30,7 @@
     -# Place favicon.ico and apple-touch-icon.png in the root directory
 
     = stylesheet_link_tag "screen", "http://fonts.googleapis.com/css?family=PT+Sans"
-    = javascript_include_tag "libs/modernizr-2.6.1.min", "facebook", "mylibs/html5", "mylibs/pagetop", "mylibs/selectivizr-min", "mylibs/smoothScroll", "mylibs/hover"
+    = javascript_include_tag "libs/modernizr-2.6.1.min", "facebook", "mylibs/html5", "mylibs/selectivizr-min", "mylibs/smoothScroll"
 
   %body{:class => current_page.data.bodyclass}
     <div id="fb-root"></div>
@@ -66,7 +66,6 @@
                       %a{:href => article.url}= article.title
 
       %footer
-        %p#page-top=link_to "PAGE TOP", "#header"
         %p &copy; #{copyright_years(2013)} RubyHiroba
 
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
