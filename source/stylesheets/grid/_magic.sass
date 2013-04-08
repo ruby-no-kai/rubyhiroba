@@ -93,15 +93,21 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(2, 8)
     .team
       @include span-columns(2, 8)
+  .headline
+    @include span-columns(8)
+    .intro
+      @include span-columns(8, 8)
+    .notice
+      @include span-columns(8, 8)
   .workshop
     @include span-columns(8)
     .p4d
       @include span-columns(4, 8)
     .tutorial
       @include span-columns(4 omega, 8)
-    .railsgirls
-      @include span-columns(4, 8)
     .ltthon
+      @include span-columns(4, 8)
+    .andmore
       @include span-columns(4 omega, 8)
   .moreinfo
     @include span-columns(8)
@@ -115,6 +121,13 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(6, 8)
     .side
       @include span-columns(2 omega, 8)
+  .detail
+    @include span-columns(8)
+    .image
+      @include span-columns(3, 8)
+    .text
+      @include span-columns(5 omega, 8)
+
 
 @include at-breakpoint($break-desktop)
   .header
@@ -139,15 +152,21 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(2 , 12)
     .team
       @include span-columns(2 omega, 12)
+  .headline
+    @include span-columns(12)
+    .intro
+      @include span-columns(9, 12)
+    .notice
+      @include span-columns(3 omega, 12)
   .workshop
     @include span-columns(12)
     .p4d
       @include span-columns(3, 12)
     .tutorial
       @include span-columns(3, 12)
-    .railsgirls
-      @include span-columns(3, 12)
     .ltthon
+      @include span-columns(3, 12)
+    .andmore
       @include span-columns(3 omega, 12)
   .moreinfo
     @include span-columns(12)
@@ -161,6 +180,13 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(8, 12)
     .side
       @include span-columns(4 omega, 12)
+  .detail
+    @include span-columns(12)
+    .image
+      @include span-columns(3, 12)
+    .text
+      @include span-columns(9 omega, 12)
+
 
 @include at-breakpoint($break-huge)
   .header
@@ -185,15 +211,21 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(3, 16)
     .team
       @include span-columns(2 omega, 16)
+  .headline
+    @include span-columns(16)
+    .intro
+      @include span-columns(12, 16)
+    .notice
+      @include span-columns(4 omega, 16)
   .workshop
     @include span-columns(16)
     .p4d
       @include span-columns(4, 16)
     .tutorial
       @include span-columns(4, 16)
-    .railsgirls
-      @include span-columns(4, 16)
     .ltthon
+      @include span-columns(4, 16)
+    .andmore
       @include span-columns(4 omega, 16)
   .moreinfo
     @include span-columns(16)
@@ -207,6 +239,12 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(12, 16)
     .side
       @include span-columns(4 omega, 16)
+  .detail
+    @include span-columns(16)
+    .image
+      @include span-columns(4, 16)
+    .text
+      @include span-columns(12 omega, 16)
 
 
 

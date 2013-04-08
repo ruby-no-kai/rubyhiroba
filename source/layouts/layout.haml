@@ -15,6 +15,8 @@
 
     %meta{:name => "description", :content => ""}
     %meta{:name => "author", :content => ""}
+    %meta{:content => "Ruby Hiroba 2013", :property => "og:site_name"}
+    %meta{:content => "/images/siteimage.png", :property => "og:image"}
     %link{ rel: "apple-touch-icon", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png" }
     %link{ rel: "apple-touch-icon", sizes: "114x114", href: "apple-touch-icon-114x114-precomposed.png" }
     %link{ rel: "apple-touch-icon", sizes: "72x72", href: "apple-touch-icon-72x72-precomposed.png" }
@@ -43,7 +45,6 @@
       = yield
 
       %footer
-        %p#page-top=link_to "PAGE TOP", "#header"
         %p &copy; #{copyright_years(2013)} RubyHiroba
 
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
