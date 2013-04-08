@@ -159,14 +159,6 @@ header
     margin-top: 8%
     text-align: center
 
-.fixed
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  // @media #{$small}
-  //   position: relative
-
 .sns
   margin: 0 0 1% 0
   padding: 0
@@ -258,9 +250,21 @@ header
     border-radius: 5px
     text-align: center
     +link-colors($white, $white, $white, $white, $white)
+    -webkit-transition: all 0.5s ease
+    -moz-transition: all 0.5s ease
+    -o-transition: all 0.5s ease
+    -ms-transition: all 0.5s ease
+    transition: all 0.5s ease
     &:before
       content: "\21E2"
       margin-right: 5px
     &:hover
       background: $accent-color
 
+.workshop
+  .p4d, .tutorial, .ltthon, .andmore
+    margin: 0 0 5% 0
+
+.moreinfo
+  .tickets, .access
+    margin: 0 0 5% 0
