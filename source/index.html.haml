@@ -42,6 +42,13 @@ bodyclass: index
             For Twitter:
             %a{:href => "http://twitter.com/search?q=%23rubyhiroba", :target => "_blank"} #rubyhiroba
 
+          .news
+            %h3 News
+            %ul
+            - blog.articles[0...3].each do |article|
+              %li.ja
+                %a{:href => article.url}= article.title
+
 
         .workshop
           :markdown
@@ -86,10 +93,10 @@ bodyclass: index
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris.
 
         .moreinfo
-          .tickets
+          .register
 
             :markdown
-              ### Tickets
+              ### Register
 
               RubyHiroba 2013 is FREE event but you have to register your info via doorkeeper.jp!!
               <a href="http://rubykaigi.doorkeeper.jp/events/3509" target="_blank">http://rubykaigi.doorkeeper.jp/events/3509</a>

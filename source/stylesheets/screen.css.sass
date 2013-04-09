@@ -27,6 +27,7 @@ $lgreen: #acde61
 $base-color: #E3E0C9
 $main-color: #212F53
 $accent-color: #B35711
+$text-color: #70766a
 
 $small: "only screen and (max-width:620px)"
 
@@ -71,7 +72,7 @@ body
   word-break: normal
   color: #3e3e29
   letter-spacing: 0.05em
-  color: $main-color
+  color: $text-color
 html:lang(ja)
   body
     .access
@@ -88,7 +89,7 @@ h2
   font-size: 1.63em
 footer
   text-align: center
-  background-color: $main-color
+  background: url(/images/bg.png) $main-color
   color: $white
 
 .container
@@ -123,11 +124,10 @@ footer
 // Print styles.
 @include h5bp-media
 
-.image
-
 header
   +clearfix
   margin: 0 auto 2%
+  color: $main-color
   hgroup
     text-align: right
     margin: 5% auto 0
@@ -184,7 +184,7 @@ header
       width: 70%
 
 #header_navi
-  background: $main-color
+  background: url(/images/bg.png) $main-color
   +clearfix
   width: 100%
   a
@@ -198,7 +198,7 @@ header
     padding: 0
     line-height: 2.0
     display: block
-    background: $main-color
+    background: url(/images/bg.png) $main-color
     +clearfix
     li
       color: $white
@@ -266,7 +266,7 @@ header
     margin: 0 0 5% 0
 
 .moreinfo
-  .tickets, .access
+  .register, .access
     margin: 0 0 5% 0
 
 .detail
@@ -279,7 +279,12 @@ header
   -webkit-border-radius: 5px
   border-radius: 5px
 .tags
-  padding: 2% 5% 5% 5%
+  padding: 2% 5%
+  h3
+    line-height: 1.0
+.news
+  padding: 0% 5% 5% 5%
+  list-style: none
   h3
     line-height: 1.0
 
