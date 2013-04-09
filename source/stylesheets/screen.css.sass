@@ -304,3 +304,33 @@ header
       margin-right: 5px
     &:hover
       background: $accent-color
+
+// team
+.team
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    text-align: center
+    margin: 0 0 5% 0
+    &:nth-child(4n)
+      +clearfix
+  .avatar
+    margin: 0
+    img
+      border: 5px solid rgba(255, 255, 255, .9)
+  .name
+    color: $accent-color
+    font-weight: bold
+    font-size: 113%
+    letter-spacing: 0.1em
+    margin: 0
+    @media #{$small}
+      font-size: 87.5%
+      letter-spacing: 0.07em
+  .role
+    text-transform: uppercase
+    margin: 1% 0 3%
+    font-size: 81%
+    letter-spacing: 0.05em
+    color: darken($base-color, 10)

@@ -1,0 +1,25 @@
+---
+title:     TEAM | RubyHiroba 2013
+bodyclass: TEAM
+---
+
+%h1.logo2=image_tag('/images/logo2.png')
+
+= partial 'nav'
+
+.wrapper
+  .container
+    %article.article
+      %ul.team
+        - data.team.each do |member|
+          %li.member<>
+            %p.name
+              = member.name
+            %p.role
+              = [*member.role].join(',<br/>')
+            %p.avatar
+              %img{ width: 100, height: 100, src: "http://www.gravatar.com/avatar/#{member.gravatar}?s=100", alt: 'Avatar' }
+
+
+
+

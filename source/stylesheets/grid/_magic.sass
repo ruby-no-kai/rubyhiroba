@@ -69,6 +69,12 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(4, 4)
     .side
       @include span-columns(4, 4)
+  .team
+    @include span-columns(4)
+    .member
+      @include span-columns(2, 4)
+      &:nth-child(2n)
+        @include span-columns(2 omega, 4)
 
 @include at-breakpoint($break-tablet)
   .header
@@ -127,7 +133,12 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(3, 8)
     .text
       @include span-columns(5 omega, 8)
-
+  .team
+    @include span-columns(8)
+    .member
+      @include span-columns(4, 8)
+      &:nth-child(even)
+        @include span-columns(4 omega, 8)
 
 @include at-breakpoint($break-desktop)
   .header
@@ -186,6 +197,14 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(3, 12)
     .text
       @include span-columns(9 omega, 12)
+  .team
+    @include span-columns(12)
+    .member
+      @include span-columns(3, 12)
+      &:nth-child(2n)
+        @include span-columns(3, 12)
+      &:nth-child(4n)
+        @include span-columns(3 omega, 12)
 
 
 @include at-breakpoint($break-huge)
@@ -245,6 +264,14 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(4, 16)
     .text
       @include span-columns(12 omega, 16)
+  .team
+    @include span-columns(16)
+    .member
+      @include span-columns(4, 16)
+      &:nth-child(2n)
+        @include span-columns(4, 16)
+      &:nth-child(4n)
+        @include span-columns(4 omega, 16)
 
 
 
