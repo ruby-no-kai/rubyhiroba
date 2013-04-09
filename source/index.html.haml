@@ -42,6 +42,13 @@ bodyclass: index
             For Twitter:
             %a{:href => "http://twitter.com/search?q=%23rubyhiroba", :target => "_blank"} #rubyhiroba
 
+          .news
+            %h3 News
+            %ul
+            - blog.articles[0...3].each do |article|
+              %li.ja
+                %a{:href => article.url}= article.title
+
 
         .workshop
           :markdown
