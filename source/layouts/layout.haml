@@ -13,10 +13,12 @@
     -# Pull in the page title
     %title= current_page.data.title
 
-    %meta{:name => "description", :content => ""}
-    %meta{:name => "author", :content => ""}
     %meta{:content => "Ruby Hiroba 2013", :property => "og:site_name"}
-    %meta{:content => "/images/siteimage.png", :property => "og:image"}
+    %meta{:property => 'og:url', :content => 'http://rubyhiroba.org/'}
+    %meta{:property => 'og:type', :content => 'activity'}
+    %meta{:content => "/images/ogImage.png", :property => "og:image"}
+    %meta{:name => "description", :content => "RubyHiroba 2013, Jun 2"}
+    %meta{:name => "keyword", :content => "rubyhiroba, ruby広場, 2013"}
     %link{ rel: "apple-touch-icon", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png" }
     %link{ rel: "apple-touch-icon", sizes: "114x114", href: "apple-touch-icon-114x114-precomposed.png" }
     %link{ rel: "apple-touch-icon", sizes: "72x72", href: "apple-touch-icon-72x72-precomposed.png" }
@@ -29,8 +31,8 @@
 
     -# Place favicon.ico and apple-touch-icon.png in the root directory
 
-    = stylesheet_link_tag "screen", "http://fonts.googleapis.com/css?family=PT+Sans"
-    = javascript_include_tag "libs/modernizr-2.6.1.min", "facebook", "mylibs/html5", "mylibs/pagetop", "mylibs/selectivizr-min", "mylibs/smoothScroll", "mylibs/hover"
+    = stylesheet_link_tag "screen", "font-awesome", "http://fonts.googleapis.com/css?family=PT+Sans"
+    = javascript_include_tag "libs/modernizr-2.6.1.min", "mylibs/html5", "mylibs/pagetop", "mylibs/selectivizr-min", "mylibs/smoothScroll"
 
   %body{:class => current_page.data.bodyclass}
     <div id="fb-root"></div>
@@ -44,8 +46,7 @@
       -# Page content gets rendered here
       = yield
 
-      %footer
-        %p &copy; #{copyright_years(2013)} RubyHiroba
+      = partial 'footer'
 
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
     :javascript

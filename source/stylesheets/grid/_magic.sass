@@ -12,7 +12,7 @@ $show-grid-backgrounds: true
 $total-columns      : 6
 // You can use ems, px or % to define the grid.
 $column-width       : 50px
-$gutter-width       : 20px
+$gutter-width       : 30px
 $grid-padding       : $gutter-width / 2
 
 // Define breakpoints, in this case when there's room for the specified columns.
@@ -47,8 +47,12 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(2, 4)
     .header_text
       @include span-columns(2 omega, 4)
+  .footer
+    @include span-columns(4)
     .sns
-      @include span-columns(4, 4)
+      @include span-columns(4 omega, 4)
+    .copy
+      @include span-columns(4 omega, 4)
   .nav
     @include span-columns(4)
     .home
@@ -83,8 +87,12 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(4, 8)
     .header_text
       @include span-columns(4 omega, 8)
+  .footer
+    @include span-columns(8)
     .sns
-      @include span-columns(8 omega, 8)
+      @include span-columns(6, 8)
+    .copy
+      @include span-columns(2 omega, 8)
   .nav
     @include span-columns(8)
     .home
@@ -147,8 +155,12 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(6, 12)
     .header_text
       @include span-columns(6 omega, 12)
+  .footer
+    @include span-columns(12)
     .sns
-      @include span-columns(12 omega, 12)
+      @include span-columns(8, 12)
+    .copy
+      @include span-columns(4 omega, 12)
   .nav
     @include span-columns(12)
     .home
@@ -214,8 +226,12 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(8, 16)
     .header_text
       @include span-columns(8 omega, 16)
+  .footer
+    @include span-columns(16)
     .sns
-      @include span-columns(16 omega, 16)
+      @include span-columns(12, 16)
+    .copy
+      @include span-columns(4 omega, 16)
   .nav
     @include span-columns(16)
     .home

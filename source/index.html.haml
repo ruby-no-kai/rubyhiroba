@@ -10,11 +10,6 @@ bodyclass: index
       %h1=image_tag('/images/logo.png')
       %h2 the play field for Rubyists — <span class="date">June 2</span>
       %p at Microsoft Japan Co., Ltd headquarters building 31st floor
-    %p.sns
-      <span class="fb-like" data-href="http://rubyhiroba.org" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="arial"></span>
-      <a class='twitter-share-button' data-hashtags='rubyhiroba' data-url='http://rubyhiroba.org/' data-via='rubyhiroba' href='https://twitter.com/share'>
-      Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 = partial 'nav'
 
@@ -34,81 +29,72 @@ bodyclass: index
 
             If your company is also interested to support this event, please drop us a line to 2013 at rubykaigi dot org. We’re planning to ready some sponsor packages for RubyHiroba 2013 (it’ll be independent with RubyKaigi 2013’s).
 
+
         .notice
           .tags
-            :markdown
-              ### Tags
+            %h3 <i class="icon-twitter"></i>Tags
 
             For Twitter:
             %a{:href => "http://twitter.com/search?q=%23rubyhiroba", :target => "_blank"} #rubyhiroba
 
           .news
-            %h3 News
+            %h3 <i class="icon-rss"></i>News
             %ul
             - blog.articles[0...3].each do |article|
               %li.ja
                 %a{:href => article.url}= article.title
 
 
-        .workshop
+      .workshop
+
+        .p4d
+          .image=image_tag('/images/p4d.png')
+
           :markdown
-            ## work shop
+            ### p4d
 
-          .p4d
-            .image=image_tag('/images/p4d.png')
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris.
 
-            :markdown
-              ### p4d
+            <p class="more_btn"><a href="/p4d.html">more info</a></p>
 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris.
+        .tutorial
+          .image=image_tag('/images/tutorial.png')
 
-              <p class="more_btn"><a href="/p4d.html">more info</a></p>
+          :markdown
+            ### Ruby Tutorial
 
-          .tutorial
-            .image=image_tag('/images/tutorial.png')
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris.
 
-            :markdown
-              ### Ruby Tutorial
+            <p class="more_btn"><a href="/tutorial.html">more info</a></p>
 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris.
+        .ltthon
+          .image=image_tag('/images/ltthon.png')
 
-              <p class="more_btn"><a href="/tutorial.html">more info</a></p>
+          :markdown
+            ### LTthon
 
-          .ltthon
-            .image=image_tag('/images/ltthon.png')
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris.
 
-            :markdown
-              ### LTthon
+            <p class="more_btn"><a href="/ltthon.html">more info</a></p>
 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris.
+        .andmore
+          .image=image_tag('/images/railsgirls.png')
 
-              <p class="more_btn"><a href="/ltthon.html">more info</a></p>
+          :markdown
+            ### and More...
 
-          .andmore
-            .image=image_tag('/images/railsgirls.png')
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris.
 
-            :markdown
-              ### and More...
+      .moreinfo
+        .register
+          %h3 <i class="icon-money"></i>Register
+          RubyHiroba 2013 is FREE event but you have to register your info via doorkeeper.jp!!<br>
+          <a href="http://rubykaigi.doorkeeper.jp/events/3509" target="_blank">http://rubykaigi.doorkeeper.jp/events/3509</a>
 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris.
-
-        .moreinfo
-          .register
-
-            :markdown
-              ### Register
-
-              RubyHiroba 2013 is FREE event but you have to register your info via doorkeeper.jp!!
-              <a href="http://rubykaigi.doorkeeper.jp/events/3509" target="_blank">http://rubykaigi.doorkeeper.jp/events/3509</a>
-
-          .access
-
-            :markdown
-              ### Access
-
-              <a href="http://www.microsoft.com/ja-jp/mscorp/branch/new/en.aspx" target="_blank">Microsoft Japan Co., Ltd headquarters building 31st floor</a>
-              <br>
-              <a href="" target="_blank">Google Map</a>
+        .access
+          %h3 <i class="icon-map-marker"></i>Access
+          <a href="http://www.microsoft.com/ja-jp/mscorp/branch/new/en.aspx" target="_blank">Microsoft Japan Co., Ltd headquarters building 31st floor</a><br>
+          <a href="" target="_blank">Google Map</a>
 
 
 
