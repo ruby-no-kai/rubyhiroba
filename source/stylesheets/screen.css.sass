@@ -27,9 +27,11 @@ $lgreen: #acde61
 $base-color: #E3E0C9
 $main-color: #212F53
 $accent-color: #B35711
-$text-color: #70766a
+$text-color: #888
 
 $small: "only screen and (max-width:620px)"
+
+$fontA: 'PT Sans', "Meiryo", "メイリオ", sans-serif
 
 .welcome
   -webkit-animation-name: welcome
@@ -62,8 +64,8 @@ $small: "only screen and (max-width:620px)"
     -webkit-transform: scale(1.03)
 
 body
-  font-size: 16px
-  font-family: 'PT Sans', "Meiryo", "メイリオ", sans-serif
+  font-size: 13px
+  font-family: 'Arial', "Meiryo", "メイリオ", sans-serif
   *font-size: 82%
   background: $base-color
   line-height: 1.5
@@ -71,7 +73,7 @@ body
   -webkit-text-size-adjust: none
   word-break: normal
   color: #3e3e29
-  letter-spacing: 0.05em
+  letter-spacing: 0.07em
   color: $text-color
 html:lang(ja)
   body
@@ -82,11 +84,6 @@ html:lang(ja)
   font-size: 13px
   letter-spacing: 0.1em
 
-h1
-  line-height: 1em
-h2
-  line-height: 1.84615em
-  font-size: 1.63em
 footer
   text-align: center
   background: url(/images/bg.png) $main-color
@@ -107,14 +104,21 @@ footer
   width: 100%
 
 .article
-  h1,h2,h3
-    color: $accent-color
+  h1,h2,h3,h4
+    color: $main-color
+    line-height: 1.4em
+    margin: 3% 0
+    font-weight: normal
+    font-family: $fontA
+  h2
+    font-size: 2.4em
+  h3
+    font-size: 1.8em
 
 .workshop
   text-align: center
   h2
     text-align: left
-    color: $accent-color
   p
     text-align: left
 
@@ -128,6 +132,7 @@ header
   +clearfix
   margin: 0 auto 2%
   color: $main-color
+  font-family: $fontA
   hgroup
     text-align: right
     margin: 5% auto 0
@@ -140,27 +145,27 @@ header
     h2
       margin: 5% 0 0 0
       padding: 0
-      font-size: 150%
+      font-size: 1.9em
       @media #{$small}
-        font-size: 100%
+        font-size: 1.4em
       .date
-        font-size: 200%
+        font-size: 2.0em
         color: $accent-color
         @media #{$small}
-          font-size: 100%
+          font-size: 1.4em
     p
       margin: 0
-      font-size: 109%
+      font-size: 1.3em
       letter-spacing: 0.05em
       font-weight: bold
       @media #{$small}
-        font-size: 83%
+        font-size: 0.9em
   .header_img
     margin-top: 8%
     text-align: center
 
 .sns
-  margin: 0 0 1% 0
+  margin: 1% 0
   padding: 0
   display: block
   @media #{$small}
@@ -217,7 +222,7 @@ header
         transition: all 0.5s ease
 
 .article
-  min-height: 800px
+  min-height: 500px
   padding: 2% 0
   @media #{$small}
     min-height: auto
@@ -261,13 +266,16 @@ header
     &:hover
       background: $accent-color
 
+.intro
+  margin-bottom: 5%
+
 .workshop
   .p4d, .tutorial, .ltthon, .andmore
-    margin: 0 0 5% 0
+    margin-bottom: 5%
 
 .moreinfo
   .register, .access
-    margin: 0 0 5% 0
+    margin-bottom: 5%
 
 .detail
   .image
@@ -278,15 +286,14 @@ header
   background-color: rgba(255, 255, 255, 1)
   -webkit-border-radius: 5px
   border-radius: 5px
+  margin-bottom: 5%
 .tags
-  padding: 2% 5%
-  h3
-    line-height: 1.0
+  padding: 2% 5% 5%
 .news
   padding: 0% 5% 5% 5%
   list-style: none
-  h3
-    line-height: 1.0
+  ul
+    margin: 0
 
 .app_btn
   width: 200px
@@ -327,14 +334,12 @@ header
       -webkit-border-radius: 5px
       border-radius: 5px
   .name
-    color: $accent-color
-    font-weight: bold
+    color: $main-color
     font-size: 113%
-    letter-spacing: 0.1em
     margin: 0
+    font-weight: bold
     @media #{$small}
       font-size: 87.5%
-      letter-spacing: 0.07em
   .role
     text-transform: uppercase
     margin: 1% 0 3%
