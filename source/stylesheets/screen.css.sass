@@ -91,7 +91,6 @@ i
     vertical-align: middle
 
 footer
-  text-align: center
   background: url(/images/bg.png) $main-color
   color: $white
 
@@ -171,21 +170,21 @@ header
     text-align: center
 
 .sns
-  margin: 1% 0
   padding: 0
   display: block
+  .btn
+    float: left
+    margin-right: 20px
+    @media #{$small}
+      margin-right: 5px
+  .twbtn
+    width: 80px
+.copy
+  float: right
+  text-align: right
   @media #{$small}
-    display: inline-block
-  .twitter-share-button
-    display: block
-    margin: 0
-    padding: 2px 0 0 0
-    float: right
-  .fb-like
-    display: block
-    margin: 0
-    padding: 0
-    float: right
+    float: none
+    text-align: left
 
 .logo2
   text-align: center
