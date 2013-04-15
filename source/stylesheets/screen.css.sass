@@ -352,3 +352,65 @@ header
     font-size: 81%
     letter-spacing: 0.05em
     color: darken($base-color, 10)
+
+.timetable
+  width: 100%
+  th
+    width: 20%
+    line-height: 2.0
+    font-weight: normal
+  td
+    text-align: center
+    line-height: 2.0
+  tr
+    &:nth-child(even)
+      background: tint($base-color, 60)
+    border-bottom: 1px solid tint($base-color, 40)
+  .wrap
+    background: $main-color
+    color: $white
+    border: 1px solid tint($base-color, 40)
+    text-align: left
+    padding: 0 2%
+    p
+      margin: 0
+    &:hover
+      background: $accent-color
+      -webkit-transition: all 0.5s ease
+      -moz-transition: all 0.5s ease
+      -o-transition: all 0.5s ease
+      -ms-transition: all 0.5s ease
+      transition: all 0.5s ease
+  .black
+    &:hover
+      background: #000000
+      -webkit-transition: all 0.8s ease
+      -moz-transition: all 0.8s ease
+      -o-transition: all 0.8s ease
+      -ms-transition: all 0.8s ease
+      transition: all 0.8s ease
+      color: tint($accent-color, 30)
+  .content
+    font-size: 113%
+    letter-spacing: 0.1em
+    @media #{$small}
+      font-size: 78%
+      letter-spacing: 0.03em
+  .category
+    font-size: 93%
+    letter-spacing: 0.1em
+    @media #{$small}
+      font-size: 78%
+      letter-spacing: 0.03em
+  .time
+    color: rgba(255, 255, 255, .8)
+    font-size: 81%
+    @media #{$small}
+      font-size: 69%
+  .blank
+    color: $base-color
+    @media #{$small}
+      font-size: 78%
+  .hour
+    @media #{$small}
+      display: none
