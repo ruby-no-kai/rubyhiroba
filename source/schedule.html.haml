@@ -10,27 +10,100 @@ bodyclass: schedule
 .wrapper
   .container
     %article.article
-      :markdown
-        ## SCHEDULE
+      %h2 TIME TABLE
+      %table.timetable
+        %thead
+          %tr
+            %th.hour
+            %th LTthon A
+            %th LTthon B
+            %th Hiroba
+            %th Work Shop
+        %tbody
+          %tr
+            %td.hour 10:00 - 10:30
+            %td.blank preparation time
+            %td.blank preparation time
+            %td.blank coffee time
+            %td.blank preparation time
+          %tr
+            %td.hour 10:30 - 11:00
+            %td.wrap{:rowspan => "3"}
+              %p.content 事前公募LT
+              %p.category 無差別
+              %p.time 10:30 - 12:00
+            %td.wrap{:rowspan => "3"}
+              %p.content 事前公募LT
+              %p.category English
+              %p.time 10:30 - 12:00
+            %td.wrap{:rowspan => "6"}
+              %p.content ブース前半
+              %p.time 10:30 - 13:30
+            %td.wrap{:rowspan => "4"}
+              %p.content ワークショップ1
+              %p.time 10:30 - 12:30
+          %tr
+            %td.hour 11:00 - 11:30
+          %tr
+            %td.hour 11:30 - 12:00
+          %tr
+            %td.hour 12:00 - 12:30
+            %td.blank{:rowspan => "2"}
+              %p Lunch
+            %td.blank{:rowspan => "2"}
+              %p Lunch
+          %tr
+            %td.hour 12:30 - 13:00
+            %td.wrap{:rowspan => "4"}
+              %p.content ワークショップ2
+              %p.time 12:30 - 14:30
+          %tr
+            %td.hour 13:00 - 13:30
+            %td.wrap{:rowspan => "3"}
+              %p.content 事前公募LT
+              %p.category Begginer
+              %p.time 13:00 - 14:30
+            %td.wrap{:rowspan => "3"}
+              %p.content 当日募集LT
+              %p.category Biz/Recruit
+              %p.time 13:00 - 14:30
+          %tr
+            %td.hour 13:30 - 14:00
+            %td.blank
+              %p ブース入れ替え
+          %tr
+            %td.hour 14:00 - 14:30
+            %td.wrap{:rowspan => "6"}
+              %p.content ブース後半
+              %p.time 14:00 - 17:00
+          %tr
+            %td.hour 14:30 - 15:00
+            %td
+            %td
+            %td.wrap{:rowspan => "4"}
+              %p.content ワークショップ3
+              %p.time 14:30 - 16:30
+          %tr
+            %td.hour 15:00 - 15:30
+            %td.wrap{:rowspan => "3"}
+              %p.content 当日募集LT
+              %p.category 無差別級
+              %p.time 15:00 - 16:30
+            %td.wrap.black{:rowspan => "3"}
+              %p.content 当日募集LT
+              %p.category 黒
+              %p.time 15:00 - 16:30
+          %tr
+            %td.hour 15:30 - 16:00
+          %tr
+            %td.hour 16:00 - 16:30
+          %tr
+            %td.hour 16:30 - 17:00
+            %td
+            %td
+            %td
 
-        ### June 2, 10am - 6pm
-
-        #### p4d
-
-        * when :
-        * where :
-
-        #### Ruby Tutorial
-
-        * when :
-        * where :
-
-        #### LTthon
-
-        * when :
-        * where :
-
-        ## FLOOR MAP
+      %h2 FLOOR MAP
 
 
 
