@@ -8,8 +8,8 @@ var google_btn, twitter_btn, facebook_btn, hatena_btn;
 
 // google (ボタン作成サイトから、コピペするとシングルクオートなので注意)
 google_btn =
-  '<div class="glbtn btn"><g:plusone size="medium" annotation="inline" width="90" style="width:50px;"></g:plusone></div>'
-  + '<script>window.___gcfg={lang:"ja"};(function(){var po=document.createElement("script");po.type="text/javascript";po.async=true;po.src="https://apis.google.com/js/plusone.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(po,s);})();<\/script>';
+  '<div class="g-plus btn" data-action="share" data-annotation="none"></div>'
+  + '<script>window.___gcfg={lang:"en"};(function(){var po=document.createElement("script");po.type="text/javascript";po.async=true;po.src="https://apis.google.com/js/plusone.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(po,s);})();<\/script>';
 
 // はてな
 hatena_btn =
