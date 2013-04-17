@@ -32,7 +32,7 @@
     -# Place favicon.ico and apple-touch-icon.png in the root directory
 
     = stylesheet_link_tag "screen", "font-awesome", "http://fonts.googleapis.com/css?family=PT+Sans"
-    = javascript_include_tag "libs/modernizr-2.6.1.min", "mylibs/html5", "mylibs/pagetop", "mylibs/selectivizr-min", "mylibs/smoothScroll"
+    = javascript_include_tag "libs/modernizr-2.6.1.min", "mylibs/html5", "mylibs/selectivizr-min", "mylibs/smoothScroll"
 
   %body{:class => current_page.data.bodyclass}
     <div id="fb-root"></div>
@@ -42,15 +42,48 @@
 
       #main-content{:role => "main"}
 
-    .layout
-      -# Page content gets rendered here
-      = yield
+    %h1.logo2
+      = image_tag 'logo2.png', alt: 'RubyHiroba 2013'
 
-      = partial "footer"
+    %nav#header_navi
+      .container
+        %ul.nav
+          %li.home= link_to "HOME", "/2013/"
+          %li.detail= link_to "BLOG", "/2013/blog.html"
+          %li.schedule= link_to "SCHEDULE", "/2013/schedule.html"
+          %li.register= link_to "REGISTER", "/2013/#register"
+          %li.access= link_to "ACCESS", "/2013/#access"
+          %li.team= link_to "TEAM", "/2013/team.html"
+
+    .wrapper
+      .container
+        %article.article
+          .main
+            - blog.articles[0...1].each do |article|
+              %h2
+                = article.title
+              %p.date
+                %time= article.date.strftime('%b %e %Y')
+              = yield
+
+          .side
+            %ul
+            - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+              %li
+                %h3= year
+                %ul
+                  - articles.each do |article|
+                    %li
+                      %a{:href => article.url}= article.title
+
+      %footer.footer
+        .container
+          %p#snsbox.sns
+          %p.copy &copy; #{copyright_years(2013)} RubyHiroba
 
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
     :javascript
-      window.jQuery || document.write('<script src="/2013/javascripts/libs/jquery-1.9.0.min.js"><\/script>')
+      window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.9.0.min.js"><\/script>')
 
     -# Holder.js - canvas-generated placeholder images for prototyping
     = javascript_include_tag "libs/holder"

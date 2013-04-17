@@ -3,7 +3,8 @@ title:     p4d | RubyHiroba 2013
 bodyclass: p4d
 ---
 
-%h1.logo2=image_tag('/images/logo2.png')
+%h1.logo2
+  = image_tag 'logo2.png', alt: 'RubyHiroba 2013'
 
 = partial 'nav'
 
@@ -12,7 +13,7 @@ bodyclass: p4d
     %article.article
       .detail
         .image
-          %img{:src => "/images/p4d.png", :alt => ""}/
+          = image_tag 'p4d.png'
         .text
           :markdown
             ## p4d
