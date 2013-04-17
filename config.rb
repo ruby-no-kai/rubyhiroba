@@ -1,3 +1,14 @@
+# activate :directory_indexes
+
+set :css_dir,    '2013/stylesheets'
+set :js_dir,     '2013/javascripts'
+set :images_dir, '2013/images'
+
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+end
+
 ###
 # Compass
 ###
@@ -78,15 +89,6 @@ helpers do
 
 end
 
-# Change the CSS directory
-# set :css_dir, "alternative_css_directory"
-
-# Change the JS directory
-# set :js_dir, "alternative_js_directory"
-
-# Change the images directory
-# set :images_dir, "alternative_image_directory"
-
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -118,7 +120,8 @@ activate :livereload
 activate :blog do |blog|
   # ブログ機能のオプションを設定
   Time.zone = "Tokyo"
-  blog.prefix = "blog"
+  blog.prefix = "2013/blog"
+  blog.permalink = "/:year/:month/:day/:title.html"
   blog.per_page = 5
   blog.paginate = true
   blog.layout = "layouts/blog_layout"
