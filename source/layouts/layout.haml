@@ -19,23 +19,22 @@
     %meta{:content => "/2013/images/ogImage.png", :property => "og:image"}
     %meta{:name => "description", :content => "RubyHiroba 2013, Jun 2"}
     %meta{:name => "keyword", :content => "rubyhiroba, ruby広場, 2013"}
-    %link{ rel: "apple-touch-icon", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png" }
-    %link{ rel: "apple-touch-icon", sizes: "114x114", href: "apple-touch-icon-114x114-precomposed.png" }
-    %link{ rel: "apple-touch-icon", sizes: "72x72", href: "apple-touch-icon-72x72-precomposed.png" }
-    %link{ rel: "apple-touch-icon", href: "apple-touch-icon-precomposed.png" }
-    %link{ rel: "shortcut icon", href: "favicon.png" }
+    %link{ rel: "apple-touch-icon", sizes: "144x144", href: "/2013/apple-touch-icon-144x144-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "114x114", href: "/2013/apple-touch-icon-114x114-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "72x72", href: "/2013/apple-touch-icon-72x72-precomposed.png" }
+    %link{ rel: "apple-touch-icon", href: "/2013/apple-touch-icon-precomposed.png" }
+    %link{ rel: "shortcut icon", href: "/2013/favicon.png" }
     / should actually be placed in your root dir
-    %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
+    %link{ rel: "icon", type: "image/ico", href: "/2013/favicon.ico" }
     -# You may wish to remove the 'initial scale=1.0' for non-responsive layouts
-    %meta{:name => "viewport", :content => "width=device-width; initial-scale=1.0"}
+    %meta{:name => "viewport", :content => "width=device-width,initial-scale=1.0,user-scalable=yes"}
 
     -# Place favicon.ico and apple-touch-icon.png in the root directory
 
     = stylesheet_link_tag "screen", "font-awesome", "http://fonts.googleapis.com/css?family=PT+Sans"
-    = javascript_include_tag "libs/modernizr-2.6.1.min", "mylibs/html5", "mylibs/pagetop", "mylibs/selectivizr-min", "mylibs/smoothScroll"
+    = javascript_include_tag "libs/modernizr-2.6.1.min", "mylibs/html5", "mylibs/selectivizr-min", "mylibs/smoothScroll"
 
   %body{:class => current_page.data.bodyclass}
-    <div id="fb-root"></div>
     /[if lt IE 7]
       %p.chromeframe
         You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
@@ -43,24 +42,9 @@
       #main-content{:role => "main"}
 
     .layout
-      -# Page content gets rendered here
       = yield
 
       = partial "footer"
 
-    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
-    :javascript
-      window.jQuery || document.write('<script src="/2013/javascripts/libs/jquery-1.9.0.min.js"><\/script>')
-
-    -# Holder.js - canvas-generated placeholder images for prototyping
-    = javascript_include_tag "libs/holder"
-
     = javascript_include_tag "plugins", "script"
 
-    -# Google Analytics: change UA-XXXXX-X to be your site's ID.
-    -# uncomment when deploying
-    / :javascript
-    /   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    /   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    /   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    /   s.parentNode.insertBefore(g,s)}(document,'script'));
