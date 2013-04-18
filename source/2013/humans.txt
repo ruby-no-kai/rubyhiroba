@@ -1,15 +1,25 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+# rubyhiroba.org/2013/
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+     Shintaro Kakutani - organizing director
+     Masayoshi Takahashi - organizer
+     Koji Shimada - organizer
+     Shyouhei Urabe - organizer
+     Masaki Takeda - organizer
+     Toshiaki Koshiba - organizer
+     Hiroshi Shibata - organizer
+     Hiromu Shioya - organizer
+     Satoshi Ebisawa - organizer
+     Shinichiro Ogawa - organizer
+     Yusuke Ando - organizer
+     Takahiro Imanaka - organizer
+     Ayumi Kumano - designer
 
-# THANKS
-
-    <name>
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
+    Middleman
+    Susy
