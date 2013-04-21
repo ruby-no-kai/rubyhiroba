@@ -5,6 +5,7 @@ tags: information
 ---
 
 Register via doorkeeper.jp
+
 <a href="http://rubykaigi.doorkeeper.jp/events/3509" target="_blank">http://rubykaigi.doorkeeper.jp/events/3509</a>
 
 RubyHiroba 2013 は単日開催の、複数トラックのRubyに関連したイベントです。
