@@ -127,6 +127,8 @@ $layouts: $break-tablet, $break-desktop, $break-huge
     @include span-columns(8)
     .register
       @include span-columns(8, 8)
+    .register
+      @include span-columns(8, 8)
     .access
       @include span-columns(8, 8)
   .article
@@ -193,10 +195,12 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(3 omega, 12)
   .moreinfo
     @include span-columns(12)
+    .booth
+      @include span-columns(4, 12)
     .register
-      @include span-columns(6, 12)
+      @include span-columns(4, 12)
     .access
-      @include span-columns(6 omega, 12)
+      @include span-columns(4 omega, 12)
   .article
     @include span-columns(12)
     .main
@@ -264,10 +268,12 @@ $layouts: $break-tablet, $break-desktop, $break-huge
       @include span-columns(4 omega, 16)
   .moreinfo
     @include span-columns(16)
+    .booth
+      @include span-columns(4, 16)
     .register
-      @include span-columns(8, 16)
+      @include span-columns(6, 16)
     .access
-      @include span-columns(8 omega, 16)
+      @include span-columns(6 omega, 16)
   .article
     @include span-columns(16)
     .main
