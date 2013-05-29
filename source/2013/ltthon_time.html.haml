@@ -1,0 +1,95 @@
+---
+title:     RubyHiroba 2013
+bodyclass: ltthon
+---
+
+%h1.logo2
+  = image_tag 'logo2.png', alt: 'RubyHiroba 2013'
+
+= partial 'nav'
+
+.wrapper
+  .container
+    %article.article
+      %h2 LTthon TIME TABLE
+      %section.lt_nav_box
+        %h4.lt_title 事前公募LT - Advanced Registration LT
+        %ul.lt_nav
+          %li
+            %a{:href => "#ar_anybody"} <span class="roomA">A</span> 無差別 / Anybody 10:30 - 12:00
+          %li
+            %a{:href => "#ar_beginner"} <span class="roomA">A</span> Beginner 13:00 - 14:30
+          %li
+            %a{:href => "#ar_english"} <span class="roomA">B</span> English 10:30 - 12:00
+          %li
+            %a{:href => "#ar_biz"} <span class="roomA">B</span> Biz/Recruit 13:00 - 14:30
+      / %section.lt_nav_box
+      /   %h4.lt_title 当日公募LT - Day Registration LT
+      /   %ul.lt_nav
+      /     %li
+      /       %a{:href => "#dr_anybody"} <span class="roomA">A</span> 無差別 / Anybody 15:00 - 16:30
+      /     %li
+      /       %a{:href => "#dr_biz"} <span class="roomA">B</span> Biz/Recruit 13:00 - 14:30
+      /     %li
+      /       %a{:href => "#dr_dark"} <span class="roomA">B</span> 黒 / Dark Side 15:00 - 16:30
+      %h3.lt_title 発表にあたっての注意事項
+      %p
+        LT登壇者も <a href="http://rubykaigi.doorkeeper.jp/events/3509" target="_blank">http://rubykaigi.doorkeeper.jp/events/3509</a> から参加登録をお願いします。<br>
+        発表はOrder順です。<br>
+        もし順番が回ってきた時にいらっしゃらなければ、次の人に先に発表していただきます。<br>
+        時間枠及び進行の都合上、順番が回って来ない場合もありますがあしからずご容赦ください。
+
+      %h3.lt_title#ar_anybody Anybody[無差別]（10:30〜12:00、部屋：A）：テーマフリーの枠です
+      %ul.lt_head
+        %li
+          %p.title LT Title
+          %p.name Talker
+      %ul.lt
+        - data.lt_ar_anybody.each do |lt_ar_anybody|
+          %li<>
+            %p.title
+              = lt_ar_anybody.title
+            %p.name
+              = lt_ar_anybody.name
+
+      %h3.lt_title#ar_beginner Beginner（13:00〜14:00、部屋：A）: LT初心者向けの枠です。
+      %ul.lt_head
+        %li
+          %p.title LT Title
+          %p.name Talker
+      %ul.lt
+        - data.lt_ar_beginner.each do |lt_ar_beginner|
+          %li<>
+            %p.title
+              = lt_ar_beginner.title
+            %p.name
+              = lt_ar_beginner.name
+
+      %h3.lt_title#ar_english English（10:30〜12:00 Room：B）: English Talks
+      %ul.lt_head
+        %li
+          %p.title LT Title
+          %p.name Talker
+      %ul.lt
+        - data.lt_ar_english.each do |lt_ar_english|
+          %li<>
+            %p.title
+              = lt_ar_english.title
+            %p.name
+              = lt_ar_english.name
+
+      %h3.lt_title#ar_biz Biz/Recruit（13:00〜14:30、部屋：B）：ビジネス系の枠です
+      %ul.lt_head
+        %li
+          %p.title LT Title
+          %p.name Talker
+      %ul.lt
+        - data.lt_ar_biz.each do |lt_ar_biz|
+          %li<>
+            %p.title
+              = lt_ar_biz.title
+            %p.name
+              = lt_ar_biz.name
+
+
+

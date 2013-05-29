@@ -433,3 +433,173 @@ header
   .hour
     @media #{$small}
       display: none
+
+.lt
+  margin: 0
+  padding: 0
+  p
+    margin: 0
+    padding: 0.7%
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+    @media #{$small}
+      display: block
+  li
+    list-style-type: decimal-leading-zero
+    list-style-position: inside
+    margin: 0
+    padding: 0 1%
+    background: $white
+    color: tint($black, 90)
+    border-bottom: 1px solid tint($base-color, 80)
+    &:last-child
+      border-bottom: none
+    &:nth-child(even)
+      background: desaturate(lighten($base-color, 15), 10)
+    @media #{$small}
+      border-bottom: thin
+      margin: 0 0 3% 0
+      padding: 0
+  .title
+    font-weight: bold
+    font-size: 108%
+    width: 70%
+    color: $main-color
+    @media #{$small}
+      width: 100%
+      border-bottom: 1px solid tint($main-color, 80)
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+  .name
+    width: 20%
+    color: $main-color
+    @media #{$small}
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      width: 100%
+
+.lt_head
+  @extend .lt
+  @media #{$small}
+    display: none
+  li
+    background: tint($main-color, 80)
+    color: tint($main-color, 80)
+    font-weight: bold
+  .title, .name
+    color: $white
+
+.lt_nav
+  margin: 0
+  padding: 0
+  list-style-type: none
+  float: left
+  width: 70%
+  @media #{$small}
+    display: none
+  li
+    margin: 0 1% 0 0
+    display: inline
+    a
+      display: inline-block
+      white-space: nowrap
+      padding: 1%
+      margin-bottom: 1%
+      background: $main-color
+      +link-colors($white, $white, $white, $white, $white)
+      text-decoration: none
+      -webkit-border-radius: 5px
+      border-radius: 5px
+      font-weight: bold
+      &:hover
+        background: $accent-color
+        -webkit-transition: all 0.5s ease
+        -moz-transition: all 0.5s ease
+        -o-transition: all 0.5s ease
+        -ms-transition: all 0.5s ease
+        transition: all 0.5s ease
+h4.lt_title
+  margin: 1% 2% 1% 0
+  float: left
+  width: 20%
+  @media #{$small}
+    display: none
+h3.lt_title
+  margin-bottom: 1%
+  border-left: 5px solid $main-color
+  padding-left: 0.5em
+  @media #{$small}
+    font-size: 124%
+    margin-bottom: 3%
+.roomA
+  color: rgba(255, 255, 255, .8)
+  font-weight: normal
+.lt_nav_box
+  +clearfix
+  width: 100%
+
+
+.booth_list
+  margin: 0
+  padding: 0
+  p
+    margin: 0
+    padding: 0.7%
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+    @media #{$small}
+      display: block
+  li
+    list-style-type: decimal-leading-zero
+    list-style-position: inside
+    margin: 0
+    padding: 0 1%
+    background: $white
+    color: tint($black, 90)
+    border-bottom: 1px solid tint($base-color, 80)
+    &:last-child
+      border-bottom: none
+    &:nth-child(even)
+      background: desaturate(lighten($base-color, 15), 10)
+    @media #{$small}
+      border-bottom: thin
+      margin: 0 0 3% 0
+      padding: 0
+  .title
+    font-weight: bold
+    font-size: 108%
+    width: 40%
+    color: $main-color
+    @media #{$small}
+      width: 100%
+      border-bottom: 1px solid tint($main-color, 80)
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+  .name
+    width: 54%
+    color: $main-color
+    @media #{$small}
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      width: 100%
+  .url
+    font-size: 85%
+    font-weight: normal
+    display: block
+.btime
+  font-size: 85%
+  font-weight: normal
+  display: block
+  color: tint($black, 70)
+.booth_list_head
+  @extend .booth_list
+  @media #{$small}
+    display: none
+  li
+    background: tint($main-color, 80)
+    color: tint($main-color, 80)
+    font-weight: bold
+  .title, .name
+    color: $white

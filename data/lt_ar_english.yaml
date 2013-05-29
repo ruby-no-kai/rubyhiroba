@@ -1,0 +1,5 @@
+- title: "Setup a Linux based ruby server using veewee, vagrant and puppet"
+  name: Niklaus Giger
+
+- title: Testing legacy chef recipes with chefspec
+  name: Allan Espinosa

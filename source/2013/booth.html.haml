@@ -21,20 +21,22 @@ bodyclass: booth
             You can open shop of your activity and will meet people who has interest on your activity.<br>
             Also you can distribute stickers, swags or etc. each booth is for seated 2 people.<br><br>
 
-            ## RubyHiroba2013の当初締め切り5/19(日)18:00まで応募分のブース出展リストを公開しました
+            ## ブース出展リストを更新しました。
 
-            現在、RubyHiroba2013のブース出展を募集しておりますが、当初締め切り5/19(日)18:00までに応募いただいた分について選考を行いましたので、その結果を発表します。
+            <p class="app_btn"><a href="#booth_list">Booth List</a></p>
 
-            <p class="app_btn"><a href="https://docs.google.com/spreadsheet/pub?key=0AoyTfzTaiZH0dEFIN1lOSVlLRWFLOUt3b085cWZUTWc" target="_balnk">Booth List</a></p>
+            なお、ブース出展の方も[http://rubykaigi.doorkeeper.jp/events/3509](http://rubykaigi.doorkeeper.jp/events/3509) から参加登録をお願いします。
 
-            なお、[http://rubykaigi.doorkeeper.jp/events/3509](http://rubykaigi.doorkeeper.jp/events/3509) から参加登録をお願いします。
-
-            ### ブースの募集は終了いたしました。
-            RubyHirobaの「Hiroba」という場所でブースが出展されます。
-
-            ブースについては地域RubyコミュニティやRubyに関連するプロジェクト、個人や団体にスペースをご用意します。
+            ### ブースとは
 
             ブースを構える事で多くの方にあなたの活動を知ってもらったり、ステッカーなどを頒布するなど交流の機会になるでしょう。また、興味のあるテーマがあれば、そのテーマについてのブースを出して、同好のRubyistで集まったり、議論をするなどを行うことができます。
+
+            ### 当日も色々あります。
+            RubyHirobaの「Hiroba」という場所でブースが出展されます。
+
+            RubyHirobaはオープンスペースなので、事前応募いただいたブース以外にも、様々な事を行えます。何かアイディアをお持ちの方は是非何か開いてもらえればとてもうれしいです！
+
+            ブースについては地域RubyコミュニティやRubyに関連するプロジェクト、個人や団体にスペースをご用意します。
 
 
             ### ブース出展時間帯
@@ -46,14 +48,6 @@ bodyclass: booth
 
             の2枠交代制を予定しています。 この時間のなかで、展示をしたり、催し物を行ったり、参加者とコミュニケーションをとったりしてお楽しみください。
 
-            ### 応募方法
-
-            **ブースの募集は終了いたしました。**
-
-            5/24(金) 23:59までの締め切りに向けて応募いただいた分については、5/29(水)の発表を予定しています。
-
-            なお応募多数の場合、RubyHirobaスタッフ陣によって出展者を選ばせていただきますので、予めご了承ください。
-
             ### ブースの備品
 
             2名が着席できる椅子と机を用意しています。 電源、ネットワークについてはベストエフォートでの提供となります。
@@ -61,6 +55,23 @@ bodyclass: booth
             ### お問い合わせ
 
             [http://rubykaigi.doorkeeper.jp/group_contacts/new](http://rubykaigi.doorkeeper.jp/group_contacts/new) のフォームからお問い合わせください。
+        .text
+          %h2#booth_list Booth List
+          %ul.booth_list_head
+            %li
+              %p.title Booth Name / TIME / URL
+              %p.name Comment
+          %ul.booth_list
+            - data.booth.each do |booth|
+              %li<>
+                %p.title
+                  = booth.title
+                  %span.btime
+                    = booth.time
+                  %span.url
+                    %a{:href => booth.url, :target => "_blank"}= booth.url
+                %p.name
+                  = booth.comment
 
 
 
