@@ -55,23 +55,23 @@ bodyclass: booth
             ### お問い合わせ
 
             [http://rubykaigi.doorkeeper.jp/group_contacts/new](http://rubykaigi.doorkeeper.jp/group_contacts/new) のフォームからお問い合わせください。
-        .text
-          %h2#booth_list Booth List
-          %ul.booth_list_head
-            %li
-              %p.title Booth Name / TIME / URL
-              %p.name Comment
-          %ul.booth_list
-            - data.booth.each do |booth|
-              %li<>
-                %p.title
-                  = booth.title
-                  %span.btime
-                    = booth.time
-                  %span.url
-                    %a{:href => booth.url, :target => "_blank"}= booth.url
-                %p.name
-                  = booth.comment
+    .article
+      %h2#booth_list Booth List
+      %ul.booth_list_head
+        %li
+          %p.title Booth Name / TIME / URL
+          %p.comment Comment
+      %ul.booth_list
+        - data.booth.each do |booth|
+          %li<>
+            %p.title
+              = booth.title
+              %span.btime
+                = booth.time
+              %span.url
+                %a{:href => booth.url, :target => "_blank"}= booth.url
+            %p.comment
+              = booth.comment
 
 
 

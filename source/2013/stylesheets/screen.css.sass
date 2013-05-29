@@ -30,6 +30,7 @@ $accent-color: #B35711
 $text-color: #666
 
 $small: "only screen and (max-width:620px)"
+$middle: "only screen and (max-width:810px)"
 
 $fontA: 'PT Sans', "Open Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif
 
@@ -235,7 +236,6 @@ header
         transition: all 0.5s ease
 
 .article
-  min-height: 500px
   padding: 2% 0
   @media #{$small}
     min-height: auto
@@ -549,7 +549,7 @@ h3.lt_title
     display: inline-block
     height: 100%
     vertical-align: middle
-    @media #{$small}
+    @media #{$middle}
       display: block
   li
     list-style-type: decimal-leading-zero
@@ -563,8 +563,8 @@ h3.lt_title
       border-bottom: none
     &:nth-child(even)
       background: desaturate(lighten($base-color, 15), 10)
-    @media #{$small}
-      border-bottom: thin
+    @media #{$middle}
+      border-bottom: none
       margin: 0 0 3% 0
       padding: 0
   .title
@@ -577,13 +577,22 @@ h3.lt_title
       border-bottom: 1px solid tint($main-color, 80)
       -moz-box-sizing: border-box
       box-sizing: border-box
-  .name
+    @media #{$middle}
+      width: 100%
+      border-bottom: 1px solid tint($main-color, 80)
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+  .comment
     width: 50%
     color: $main-color
     @media #{$small}
       -moz-box-sizing: border-box
       box-sizing: border-box
       width: 100%
+    @media #{$middle}
+      width: 100%
+      -moz-box-sizing: border-box
+      box-sizing: border-box
   .url
     font-size: 85%
     font-weight: normal
@@ -595,11 +604,11 @@ h3.lt_title
   color: tint($black, 70)
 .booth_list_head
   @extend .booth_list
-  @media #{$small}
+  @media #{$middle}
     display: none
   li
     background: tint($main-color, 80)
     color: tint($main-color, 80)
     font-weight: bold
-  .title, .name
+  .title, .comment
     color: $white
