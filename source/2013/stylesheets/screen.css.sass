@@ -451,12 +451,12 @@ header
     margin: 0
     padding: 0 1%
     background: $white
-    color: tint($black, 90)
+    color: tint($black, 80)
     border-bottom: 1px solid tint($base-color, 80)
     &:last-child
       border-bottom: none
     &:nth-child(even)
-      background: desaturate(lighten($base-color, 15), 10)
+      background: desaturate(lighten($base-color, 12), 10)
     @media #{$small}
       border-bottom: thin
       margin: 0 0 3% 0
@@ -484,8 +484,8 @@ header
   @media #{$small}
     display: none
   li
-    background: tint($main-color, 80)
-    color: tint($main-color, 80)
+    background: tint($main-color, 70)
+    color: tint($main-color, 70)
     font-weight: bold
   .title, .name
     color: $white
@@ -557,12 +557,12 @@ h3.lt_title
     margin: 0
     padding: 0 1%
     background: $white
-    color: tint($black, 90)
-    border-bottom: 1px solid tint($base-color, 80)
+    color: tint($black, 80)
+    border-bottom: 1px solid tint($base-color, 70)
     &:last-child
       border-bottom: none
     &:nth-child(even)
-      background: desaturate(lighten($base-color, 15), 10)
+      background: desaturate(lighten($base-color, 12), 10)
     @media #{$middle}
       border-bottom: none
       margin: 0 0 3% 0
@@ -572,23 +572,14 @@ h3.lt_title
     font-size: 108%
     width: 40%
     color: $main-color
-    @media #{$small}
-      width: 100%
-      border-bottom: 1px solid tint($main-color, 80)
-      -moz-box-sizing: border-box
-      box-sizing: border-box
     @media #{$middle}
       width: 100%
-      border-bottom: 1px solid tint($main-color, 80)
+      border-bottom: 1px solid tint($main-color, 70)
       -moz-box-sizing: border-box
       box-sizing: border-box
   .comment
     width: 50%
     color: $main-color
-    @media #{$small}
-      -moz-box-sizing: border-box
-      box-sizing: border-box
-      width: 100%
     @media #{$middle}
       width: 100%
       -moz-box-sizing: border-box
@@ -607,8 +598,8 @@ h3.lt_title
   @media #{$middle}
     display: none
   li
-    background: tint($main-color, 80)
-    color: tint($main-color, 80)
+    background: tint($main-color, 70)
+    color: tint($main-color, 70)
     font-weight: bold
   .title, .comment
     color: $white
