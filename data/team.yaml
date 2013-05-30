@@ -32,7 +32,7 @@
 
 - name: Satoshi Ebisawa
   role: organizer
-  gravatar: ec3aedf8a29bf5f1dcace93eed9f0015?s=400
+  gravatar: ec3aedf8a29bf5f1dcace93eed9f0015
 
 - name: Shinichiro Ogawa
   role: organizer
@@ -45,6 +45,26 @@
 - name: Takahiro Imanaka
   role: organizer
   gravatar: 6225ab07825b6c8cb4cd8aee0bad5eba
+
+- name: Yoji Shidara
+  role: organizer
+  gravatar: 817b7699ccbd3a6664de66eee8c2cbd2
+
+- name: Yuki Torii
+  role: organizer
+  gravatar: c67596c92e9d161d314f69de3f05f00c
+
+- name: Makoto Yonezawa
+  role: organizer
+  gravatar: 8da7ceb361c63bd6622fe33153a0293b
+
+- name: Masatoshi Seki
+  role: organizer
+  gravatar:
+
+- name: Hidekazu Koiwa
+  role: organizer
+  gravatar: 256838377ddbe600e85d8f446aae224d
 
 - name: Ayumi Kumano
   role: designer
