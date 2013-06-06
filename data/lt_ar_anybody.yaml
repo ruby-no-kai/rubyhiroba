@@ -1,32 +1,39 @@
 - title: Refactor or Die
   name: Sho Kusano
+  url: https://speakerdeck.com/rosylilly/refactor-or-die
 
 - title: うづらルビーカイギのご報告
   name: Uchio KONDO
 
 - title: Rails breadcrumb gems comparison(仮)
   name: ma2ge
+  url: https://speakerdeck.com/ma2gedev/introduce-rails-breadcrumbs-gems-breadcrumble
 
 - title: RubyKaigiのレポートを書くことになったので校正の一部を自動化できないかなあとRubyとEmacsで挑戦してみた．今までで一番長いLTのタイトルはどのくらいなのだろう？こんなにタイトルが長いとデザイナーさん泣かせかもしれない．じゅげむじゅげむ(後略)
   name: ヽ（´・肉・｀）ノ
 
 - title: Ruby on Rails Tutorial もくもく翻訳会
   name: yasulab
+  url: https://speakerdeck.com/yasulab/ruby-on-rails-tutorial-fan-yi-puroziekuto
 
 - title: Padrino is agnostic
   name: tyabe
+  url: https://speakerdeck.com/tyabe/padrino-is-agnostic
 
 - title: 我こそがインターネットカラオケマン
   name: joker1007
+  url: https://speakerdeck.com/joker1007/wo-kosogaintanetutokaraokeman
 
 - title: アメリカ
   name: jugyo
 
 - title: Ruby 2.0.0 の正規表現の新機能
   name: 西山和広
+  url: http://slide.rabbit-shocker.org/authors/znz/ruby200-regexp/
 
 - title: Throw away your unit-test code(ユニットテストを窓から投げ捨てろ).
   name: Shin Semiya
+  url: http://www.slideshare.net/shinsemiya1/ruby-hiroba20130602
 
 - title: iOSアプリをRubyで書くMobiRuby
   name: masuidrive
@@ -36,15 +43,19 @@
 
 - title: Q
   name: tomykaira
+  url: http://www.slideshare.net/tomy_kaira/qspec
 
 - title: Sequelのすすめ 〜何故私はSQLが嫌いなのか〜
   name: とみたまさひろ
+  url: http://slide.rabbit-shocker.org/authors/tommy/sequel/
 
 - title: Ruby×Scratch×CoderDojo
   name: Aki Tada
+  url: https://speakerdeck.com/tdak/ruby-star-scratch-star-coderdojo
 
 - title: minitest vs rspec
   name: willnet
+  url: https://speakerdeck.com/willnet/minitest-vs-rspec
 
 - title: こんにちは、Azureです。（仮）
   name: Masaki Takeda

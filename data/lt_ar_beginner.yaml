@@ -3,6 +3,7 @@
 
 - title: Sinatra::RocketIO - WebSocket/Comet plugin for Sinatra
   name: "@shokai"
+  url: http://www.slideshare.net/shokai/sinatrarocketio-rubyhiroba2013
 
 - title: 仕事でCGIからRailsに移行した話
   name: nakajijapan
@@ -12,21 +13,26 @@
 
 - title: Rubyを始めて躓いた5つのこと
   name: tdakak
+  url: https://speakerdeck.com/tdak/rubywohazimetatokinitumazuitakoto
 
 - title: How to build an army of sponges
   name: chatgris
 
 - title: ファストオーダー
   name: Katsuyoshi Ito
+  url: https://speakerdeck.com/itosoft/fast-order
 
 - title: みんな地域Ruby会議にいこうぜ
   name: muryoimpl
+  url: http://www.slideshare.net/muryoimpl1/ruby-22315997
 
 - title: ジュンク堂の方から来ました
   name: ひがき
 
 - title: 僕と小田原とRubyとRails
   name: asflash8
+  url: http://www.slideshare.net/asflash8/ruby-hiroba2013-odarawaandrubyandrailsandme
 
 - title: Don't forget MacRuby
   name: zakuni
+  url: https://speakerdeck.com/zakuni/dont-forget-macruby

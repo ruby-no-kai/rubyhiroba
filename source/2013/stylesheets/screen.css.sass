@@ -474,6 +474,11 @@ header
       border-bottom: 1px solid tint($main-color, 80)
       -moz-box-sizing: border-box
       box-sizing: border-box
+    a
+      +link-colors($main-color, $accent-color, $main-color, $main-color, $main-color)
+      text-decoration: underline
+      &:hover
+        text-decoration: none
   .name
     width: 20%
     color: $main-color

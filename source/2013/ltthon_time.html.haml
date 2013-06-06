@@ -23,15 +23,11 @@ bodyclass: ltthon
             %a{:href => "#ar_english"} <span class="roomA">B</span> English 10:30 - 12:00
           %li
             %a{:href => "#ar_biz"} <span class="roomA">B</span> Biz/Recruit 13:00 - 14:30
-      / %section.lt_nav_box
-      /   %h4.lt_title 当日公募LT - Day Registration LT
-      /   %ul.lt_nav
-      /     %li
-      /       %a{:href => "#dr_anybody"} <span class="roomA">A</span> 無差別 / Anybody 15:00 - 16:30
-      /     %li
-      /       %a{:href => "#dr_biz"} <span class="roomA">B</span> Biz/Recruit 13:00 - 14:30
-      /     %li
-      /       %a{:href => "#dr_dark"} <span class="roomA">B</span> 黒 / Dark Side 15:00 - 16:30
+      %section.lt_nav_box
+        %h4.lt_title 当日公募LT - Day Registration LT
+        %ul.lt_nav
+          %li
+            %a{:href => "#dr_anybody"} <span class="roomA">A</span> 無差別 / Anybody
       %h3.lt_title 発表にあたっての注意事項
       %p
         LT登壇者も <a href="http://rubykaigi.doorkeeper.jp/events/3509" target="_blank">http://rubykaigi.doorkeeper.jp/events/3509</a> から参加登録をお願いします。<br>
@@ -48,7 +44,7 @@ bodyclass: ltthon
         - data.lt_ar_anybody.each do |lt_ar_anybody|
           %li<>
             %p.title
-              = lt_ar_anybody.title
+              %a{:href => lt_ar_anybody.url, :target => "_blank"}= lt_ar_anybody.title
             %p.name
               = lt_ar_anybody.name
 
@@ -61,7 +57,7 @@ bodyclass: ltthon
         - data.lt_ar_beginner.each do |lt_ar_beginner|
           %li<>
             %p.title
-              = lt_ar_beginner.title
+              %a{:href => lt_ar_beginner.url, :target => "_blank"}= lt_ar_beginner.title
             %p.name
               = lt_ar_beginner.name
 
@@ -74,7 +70,7 @@ bodyclass: ltthon
         - data.lt_ar_english.each do |lt_ar_english|
           %li<>
             %p.title
-              = lt_ar_english.title
+              %a{:href => lt_ar_english.url, :target => "_blank"}= lt_ar_english.title
             %p.name
               = lt_ar_english.name
 
@@ -87,9 +83,22 @@ bodyclass: ltthon
         - data.lt_ar_biz.each do |lt_ar_biz|
           %li<>
             %p.title
-              = lt_ar_biz.title
+              %a{:href => lt_ar_biz.url, :target => "_blank"}= lt_ar_biz.title
             %p.name
               = lt_ar_biz.name
+
+      %h3.lt_title#dr_anybody 当日公募LT - Day Registration LT
+      %ul.lt_head
+        %li
+          %p.title LT Title
+          %p.name Talker
+      %ul.lt
+        - data.lt_dr_anybody.each do |lt_dr_anybody|
+          %li<>
+            %p.title
+              %a{:href => lt_dr_anybody.url, :target => "_blank"}= lt_dr_anybody.title
+            %p.name
+              = lt_dr_anybody.name
 
 
 
