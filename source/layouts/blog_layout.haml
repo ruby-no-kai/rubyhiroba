@@ -60,9 +60,9 @@
           .main
             - blog.articles[0...1].each do |article|
               %h2
-                = article.title
+                = current_page.title
               %p.date
-                %time= article.date.strftime('%b %e %Y')
+                %time= current_page.date.strftime('%b %e %Y')
               = yield
 
           .side
