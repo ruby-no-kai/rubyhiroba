@@ -120,6 +120,19 @@ body
 
 .footer
   padding: 2em 1em
-  text-align: right
-  font-size: 11px
-  color: #ccc
+  .sns
+    margin: 0
+    padding: 0
+    @media #{$small}
+      margin-bottom: 1%
+    .btn
+      float: left
+      margin-right: 20px
+      @media #{$small}
+        margin-right: 5px
+    .twbtn
+      width: 80px
+  .copy
+    text-align: right
+    font-size: 85%
+    color: #ccc
