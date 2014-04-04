@@ -35,16 +35,23 @@ $middle: "only screen and (max-width:810px)"
 body
   text-align: center
   font-family: 'Poly', serif
+  font-size: 13px
+
+.container
+  img
+    max-width: 100%
+    height: auto
 
 #main
   position: relative
-
 
 #header
   width: 100%
   height: 600px
   position: relative
   z-index: -10
+  @media #{$small}
+    height: 500px
   #header-cover
     position: fixed
     background: url("/2014/images/bg.jpg")
@@ -52,13 +59,18 @@ body
     background-position: center center
     width: 100%
     height: 700px
+    @media #{$small}
+      height: 600px
 #logo
-  margin: -450px auto 75px
+  margin: -480px auto 75px
   width: 556px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  @media #{$small}
+    margin: -450px auto 40px
 
 .conetnt
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5)
-  box-shadow: 0 1px 3px rgba(0,0,0,0.5)
   background: #f6f6f6
   max-width: 100%
   padding: 100px 10px
@@ -72,6 +84,8 @@ body
   z-index: 10
   &:nth-child(odd)
     background-color: #fff
+  @media #{$small}
+    padding: 20px 10px
 
 
 
@@ -90,3 +104,16 @@ body
       conetnt: ""
       width: 100px
       border-bottom: 3px solid #13b0b2
+    @media #{$small}
+      margin: 0 0 1em
+      padding: 0
+      font-size: 131%
+
+.info-bar
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3)
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3)
+  padding: 20px 10px
+  text-align: center
+  p
+    color: #ccc
+    letter-spacing: 0.07em
