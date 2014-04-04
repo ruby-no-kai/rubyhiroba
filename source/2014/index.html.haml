@@ -1,109 +1,24 @@
 ---
-title     : RubyHiroba 2013
+title     : RubyHiroba 2014
 bodyclass : index
-layout    : layout_2013
+layout    : layout
 ---
 
-.container
-  %header#header.header
-    .header_img.welcome2=image_tag('play_ground.png')
-    %hgroup.welcome.header_text
-      %h1
-        = image_tag 'logo.png', alt: 'RubyHiroba 2013'
-      %h2 the play field for Rubyists — <span class="date">June 2</span>
-      %p at Microsoft Japan Co., Ltd headquarters building 31st floor
+#main
+  #header
+    #header-cover
+  #logo
+    %img{:src => "2014/images/logo.png", :alt => ""}
+  .conetnt
+    .text
+      :markdown
+        # RubyHiroba 2014, the play field for Rubyists — September 21
 
-= partial 'nav'
+        RubyHiroba 2014 is a single day, multi-tracked(it’ll be 3 - 4 tracks, we hope) Ruby related event which will be held in downtown Tokyo, in front of Shinagawa St. on the day after RubyKaigi 2014 — September 21
 
-.wrapper
-  .container
-    %article.article
-      .headline
-        .intro
-          :markdown
-            ## RubyHiroba 2013, the play field for Rubyists — June 2
+        Hiroba(広場) means ‘play field’ in Japanese. You rubyists can find many chances to hang out, join some workshop, tutorial, BOF, give a lightning talk and talk to awesome rubyist come from all around the world!
 
-            RubyHiroba 2013 is a single day, multi-tracked(it’ll be 3 - 4 tracks, we hope) Ruby related event which will be held in downtown Tokyo, in front of Shinagawa St. on the day after RubyKaigi 2013 — June 2.
+        RubyHiroba is free to join! it’s totally supported by Microsoft Japan Co., Ltd.
 
-            Hiroba<span class="ja">(広場)</span> means ‘play field’ in Japanese. You rubyists can find many chances to hang out, join some workshop, tutorial, BOF, give a lightning talk and talk to awesome rubyist come from all around the world!
-
-            RubyHiroba is free to join! it’s totally supported by Microsoft Japan Co., Ltd. <3
-
-            If your company is also interested to support this event, please drop us a line to 2013 at rubykaigi dot org. We’re planning to ready some sponsor packages for RubyHiroba 2013 (it’ll be independent with RubyKaigi 2013’s).
-
-
-        .notice
-          .tags
-            %h3 <i class="icon-twitter"></i>Tags
-
-            For Twitter:
-            %a{:href => "http://twitter.com/search?q=%23rubyhiroba", :target => "_blank"} #rubyhiroba
-
-          .news
-            %h3 <i class="icon-rss"></i>News
-            %ul
-            - blog.articles[0...3].each do |article|
-              %li.ja
-                %a{:href => article.url}= article.title
-
-
-      .workshop
-
-        .p4d
-          .image=image_tag('p4d.png')
-
-          :markdown
-            ### p4d
-
-            Programming for Designer &amp; Design for Programmer workshop.
-
-          <p class="more_btn"><a href="/2013/p4d.html">More info</a></p>
-
-        .ltthon
-          .image=image_tag('ltthon.png')
-
-          :markdown
-            ### LTthon
-
-            Lightning Talk Hackathon
-
-          <p class="more_btn"><a href="/2013/ltthon.html">More info</a></p>
-
-        .tutorial
-          .image=image_tag('tutorial.png')
-
-          :markdown
-            ### dRuby Hiroba
-
-            Hands-on toRuby sponsored
-
-            <p class="more_btn"><a href="/2013/druby.html" target="_blank">More info</a></p>
-
-        .andmore
-          .image=image_tag('railsgirls.png')
-
-          :markdown
-            ### RailsGirls, More! extended.
-
-            Rails tutorial for Rails Beginner Girls.
-
-            <p class="more_btn"><a href="https://www.facebook.com/RailsgirlsMoreExtended" target="_blank">More info</a></p>
-
-      .moreinfo
-        .booth
-          %h3 <i class="icon-flag"></i>Booth
-          %p We will have open space for community booth or Project booth for Ruby relate activity.
-          <p class="more_btn"><a href="/2013/booth.html">More info</a></p>
-
-        #register.register
-          %h3 <i class="icon-money"></i>Register
-          RubyHiroba 2013 is FREE event but you have to register your info via doorkeeper.jp!!<br>
-          <a href="http://rubykaigi.doorkeeper.jp/events/3509" target="_blank">http://rubykaigi.doorkeeper.jp/events/3509</a>
-
-        #access.access
-          %h3 <i class="icon-map-marker"></i>Access
-          <a href="http://www.microsoft.com/ja-jp/mscorp/branch/new/en.aspx" target="_blank">Microsoft Japan Co., Ltd headquarters building 31st floor</a><br>
-          <a href="https://maps.google.com/?q=35.62671420319663,139.7403645515442(%E6%97%A5%E6%9C%AC%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE+%E5%93%81%E5%B7%9D%E6%9C%AC%E7%A4%BE31F,+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E6%B8%AF%E5%8D%97+2-16-3+%E5%93%81%E5%B7%9D%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%82%BF%E3%83%AF%E3%83%BC)&ie=UTF8&hl=ja&z=16" target="_blank">Google Map</a>
-
-
+        If your company is also interested to support this event, please drop us a line to 2014 at rubykaigi dot org. We’re planning to ready some sponsor packages for RubyHiroba 2014 (it’ll be independent with RubyKaigi 2014’s).
 
