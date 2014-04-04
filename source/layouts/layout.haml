@@ -3,34 +3,30 @@
 /[if IE 7]    <html class="no-js lt-ie9 lt-ie8">
 /[if IE 8]    <html class="no-js lt-ie9">
 <!--[if gt IE 8]><!-->
-%html{:class => "no-js", :lang => "en"}
+%html{ class: "no-js", lang: "en" }
   <!--<![endif]-->
   %head
-    %meta{:charset => "utf-8"}
-    %meta{:lang => "ja"}
-    %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge,chrome=1"}
-
-    -# Pull in the page title
+    %meta{ charset: "utf-8" }
+    %meta{ lang: "ja" }
+    %meta{'http-equiv' => "X-UA-Compatible", content: "IE=edge,chrome=1" }
     %title= current_page.data.title
-
-    %meta{:content => "Ruby Hiroba 2014", :property => "og:site_name"}
-    %meta{:property => 'og:url', :content => 'http://rubyhiroba.org/2014/'}
-    %meta{:property => 'og:type', :content => 'activity'}
-    %meta{:content => "/2014/images/ogImage.png", :property => "og:image"}
-    %meta{:name => "description", :content => "RubyHiroba 2014, Jun 2"}
-    %meta{:name => "keyword", :content => "rubyhiroba, ruby広場, 2014"}
-    %link{ rel: "shortcut icon", href: "/2014/favicon.png" }
-    / should actually be placed in your root dir
+    %meta{ name: "description", content: "Rubyhiroba 2014" }
+    %meta{ name: "author", content: "rubyhiroba, ruby広場, 2014" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %meta{ content: "RubyHiroba 2014", property: "og:title" }
+    %meta{ content: "article", property: "og:type" }
+    %meta{ content: "RubyHiroba 2014, Sep 21", property: "og:description" }
+    %meta{ content: "http://rubyhiroba.org/2014/", property: "og:url" }
+    %meta{ content: "http://rubyhiroba.org/2014/ogp.jpg", property: "og:image" }
+    %meta{ content: "RubyHiroba 2014", property: "og:site_name" }
+    %link{ rel: "shortcut icon", href: "f/2014/favicon.ico" }
     %link{ rel: "icon", type: "image/ico", href: "/2014/favicon.ico" }
-    -# You may wish to remove the 'initial scale=1.0' for non-responsive layouts
-    %meta{:name => "viewport", :content => "width=device-width,initial-scale=1.0,user-scalable=yes"}
-
-    -# Place favicon.ico and apple-touch-icon.png in the root directory
+    %meta{ name: "viewport", content: "width=device-width,initial-scale=1.0,user-scalable=yes" }
 
     = stylesheet_link_tag "screen", "font-awesome", "http://fonts.googleapis.com/css?family=Poly:400,400italic"
     = javascript_include_tag "libs/modernizr-2.6.1.min", "mylibs/html5", "mylibs/selectivizr-min", "mylibs/smoothScroll"
 
-  %body{:class => current_page.data.bodyclass}
+  %body{ class: current_page.data.bodyclass }
     /[if lt IE 7]
       %p.chromeframe
         You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
