@@ -116,7 +116,7 @@ activate :blog do |blog|
   blog.permalink = "/:year/:month/:day/:title.html"
   blog.per_page = 5
   blog.paginate = true
-  blog.layout = "layouts/blog_layout"
+  blog.layout = "layouts/blog_layout_2013"
 end
 
 activate :deploy do |deploy|
