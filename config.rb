@@ -1,8 +1,8 @@
 # activate :directory_indexes
 
-set :css_dir,    '2013/stylesheets'
-set :js_dir,     '2013/javascripts'
-set :images_dir, '2013/images'
+set :css_dir,    '2014/stylesheets'
+set :js_dir,     '2014/javascripts'
+set :images_dir, '2014/images'
 
 ###
 # Compass
@@ -41,7 +41,8 @@ require 'susy'
 # page "/path/to/file.html", :layout => false
 #
 # With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
+page "/2013/*",      :layout => :layout_2013
+page "/2013/blog/*", :layout => :blog_layout_2013
 #
 # A path which all have the same layout
 # with_layout :admin do
