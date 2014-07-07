@@ -61,6 +61,7 @@ body
 
 #header-small
   width: 100%
+  padding-top: 40px 
   height: 150px
   position: relative
   z-index: -10
@@ -88,6 +89,38 @@ body
   @media #{$small}
     width: 300px
     margin: -125px auto 20px
+
+#header-menu
+  position: fixed
+  width: 100%
+  background-color: #fff
+  z-index: 2
+  ul
+    width: 100%
+    list-type: none
+    margin: 0
+    padding: 0
+    li
+      display: inline-block
+      width: 15%
+      text-align: center
+      line-height: 40px
+      font-size: 14px
+      a
+        display: block
+        width: 100%
+        height: 100%  
+        color: rgba(0, 0, 0, 1.0)
+        text-decoration: none
+        margin-bottom: 3px 
+        &:hover
+          color: rgba(215, 93, 88, 1.0)
+          border-bottom: 3px solid rgba(215, 93, 88, 1.0)
+          margin-bottom: -3px 
+      @media #{$small}
+        width: auto
+        margin-right: 10px
+        font-size: 10px 
 
 .conetnt
   background: #f6f6f6
@@ -130,6 +163,8 @@ body
   h2
     margin: 2em 0
     color: #000
+    @media #{$small}
+      margin: 1em 0 
   a
     color: rgba(215, 93, 88, 1.0)
     &:hover
