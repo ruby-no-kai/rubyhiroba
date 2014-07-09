@@ -8,8 +8,8 @@ layout    : layout
   #header-small
     #header-cover
   #logo-small.container
-    %a{:href => "/2014/index.html"}
-      %img{:src => "/2014/images/logo-small.png", :alt => "RubyHiroba 2014"}
+    %a{ href: "/2014/index.html"}
+      %img{ src: "/2014/images/logo-small.png", alt: "RubyHiroba 2014"}
   .conetnt
     .text
       :markdown
@@ -17,8 +17,13 @@ layout    : layout
 
         ## Lightning Talkとは？
 
-        LT(Lightning Talk)とは「Lightning Talks」のこと。持ち時間5分、延長なし、質疑なしのショートプレゼンです（くわしくはこちら）。
-
+      %p
+        LT(Lightning Talk)とは「Lightning Talks」のこと。持ち時間5分、延長なし、質疑なしのショートプレゼンです（
+        %a{ href: "http://shibuya.pm.org/blosxom/common/lightning_talks.html", target: "_blank"}
+          くわしくはこちら
+        ）。
+      
+      :markdown
         ## LTthonとは？
 
         LTthonとは、Lightning Talksをマラソンのように続けて行うトラックです。惜しくもRubyKaigiのCFPに漏れてしまった方、RubyKaigiで高まった意識をぶつけたい方、これを機会にスピーカーデビューしてみたい方などにオススメできる発表のチャンスです。
