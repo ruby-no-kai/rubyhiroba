@@ -139,12 +139,12 @@ body
   @media #{$small}
     padding: 20px 10px
 
-
-
 .text
   max-width: 800px
   margin: 0 auto
   font-size: 18px
+  @media #{$small}
+    font-size: 13px 
   h1
     text-align: center
     margin: 0 0 2em
@@ -170,11 +170,14 @@ body
     &:hover
       text-decoration: none
   ul
+    @media #{$small}
+      margin: 0
+      padding: 0 0 0 20px
     li
-      margin-bottom: 10px 
+      margin-bottom: 10px
       ul
         margin: 10px 0 0
-        padding-left: 20px 
+        padding-left: 20px
   
 
 .info-bar
