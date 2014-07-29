@@ -36,7 +36,7 @@ $(window).bind('scroll.sns, load.sns', function(){
 });
 
 $(".footer-menu-gnav-contents").click(function () {
-  $(".footer-menu-contents").show();
+  $(".footer-menu-contents").toggle();
 });
 
 
