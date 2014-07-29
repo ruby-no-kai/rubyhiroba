@@ -61,7 +61,6 @@ body
 
 #header-small
   width: 100%
-  padding-top: 40px 
   height: 150px
   position: relative
   z-index: -10
@@ -95,6 +94,8 @@ body
   width: 100%
   background-color: #fff
   z-index: 2
+  @media #{$middle}
+    display: none
   ul
     width: 100%
     list-type: none
@@ -109,18 +110,77 @@ body
       a
         display: block
         width: 100%
-        height: 100%  
+        height: 100%
         color: rgba(0, 0, 0, 1.0)
         text-decoration: none
-        margin-bottom: 3px 
+        margin-bottom: 3px
         &:hover
           color: rgba(215, 93, 88, 1.0)
           border-bottom: 3px solid rgba(215, 93, 88, 1.0)
-          margin-bottom: -3px 
+          margin-bottom: -3px
       @media #{$small}
         width: auto
         margin-right: 10px
-        font-size: 10px 
+        font-size: 10px
+
+#footer-menu
+  display: none
+  @media #{$middle}
+    display: block
+    position: fixed
+    bottom: 0
+    width: 100%
+    background-color: #fff
+    z-index: 2
+    ul.footer-menu-gnav
+      border-top: 3px solid rgba(215, 93, 88, 1.0)
+      display: table
+      width: 100%
+      list-type: none
+      margin: 0
+      padding: 0
+      li
+        display: table-cell
+        text-align: center
+        line-height: 40px
+        @media #{$middle}
+          width: 50%
+          &:first-child
+            border-right: 1px solid #eee
+        a
+          display: block
+          width: 100%
+          height: 100%
+          color: rgba(0, 0, 0, 1.0)
+          text-decoration: none
+          margin-bottom: 3px
+          &:hover
+            color: rgba(215, 93, 88, 1.0)
+            border-bottom: 3px solid rgba(215, 93, 88, 1.0)
+            margin-bottom: -3px
+      ul.footer-menu-contents
+        position: fixed
+        bottom: 46px
+        left: 0
+        display: none
+        width: 100%
+        margin: 0
+        padding: 0
+        li
+          display: block
+          width: 100%
+          &:last-child
+            a
+              margin-bottom: 0
+          a
+            background-color: rgba(0, 0, 0, 0.6)
+            width: 100%
+            height: 100%
+            color: #FFF
+            margin-bottom: 1px
+            &:hover
+              background-color: rgba(0, 0, 0, 1.0)
+              border-bottom: none
 
 .conetnt
   background: #f6f6f6
@@ -144,7 +204,7 @@ body
   margin: 0 auto
   font-size: 18px
   @media #{$small}
-    font-size: 13px 
+    font-size: 13px
   h1
     text-align: center
     margin: 0 0 2em
@@ -164,7 +224,7 @@ body
     margin: 2em 0
     color: #000
     @media #{$small}
-      margin: 1em 0 
+      margin: 1em 0
   a
     color: rgba(215, 93, 88, 1.0)
     &:hover
@@ -178,7 +238,7 @@ body
       ul
         margin: 10px 0 0
         padding-left: 20px
-  
+
 
 .info-bar
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3)
@@ -190,10 +250,10 @@ body
     letter-spacing: 0.07em
 
 .nav-to-contents
-  line-height: 100px 
+  line-height: 100px
   margin-bottom: 5%
   @media #{$small}
-    line-height: 50px   
+    line-height: 50px
   a
     display: block
     width: 100%
@@ -208,9 +268,11 @@ body
     &:hover
       background-color: rgba(215, 93, 88, 0.8)
     @media #{$small}
-      font-size: 100% 
+      font-size: 100%
 .footer
   padding: 2em 1em
+  @media #{$middle}
+    padding: 2em 1em 5em
   .sns
     margin: 0
     padding: 0
@@ -229,3 +291,5 @@ body
     text-align: right
     font-size: 85%
     color: #ccc
+    @media #{$small}
+      text-align: left

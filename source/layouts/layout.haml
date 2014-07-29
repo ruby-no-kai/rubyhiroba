@@ -24,7 +24,7 @@
     %meta{ name: "viewport", content: "width=device-width,initial-scale=1.0,user-scalable=yes" }
 
     = stylesheet_link_tag "screen", "font-awesome", "http://fonts.googleapis.com/css?family=Poly:400,400italic"
-    = javascript_include_tag "libs/modernizr-2.6.1.min", "mylibs/html5", "mylibs/selectivizr-min", "mylibs/smoothScroll"
+    = javascript_include_tag "libs/jquery-1.9.0.min.js", "libs/modernizr-2.6.1.min", "mylibs/html5", "mylibs/selectivizr-min", "mylibs/smoothScroll"
 
   %body{ class: current_page.data.bodyclass }
     <div id="fb-root"></div>
@@ -38,7 +38,7 @@
     /[if lt IE 7]
       %p.chromeframe
         You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
-    
+
     %nav#header-menu
       %ul
         %li
@@ -52,6 +52,20 @@
         %li
           = link_to "hirobaスペース", "/2014/hiroba-space.html"
     = yield
+    %nav#footer-menu
+      %ul.footer-menu-gnav
+        %li
+          = link_to "HOME", "/2014/"
+        %li.footer-menu-gnav-contents
+          %a{:href => ""}Contents
+          %ul.footer-menu-contents
+            %li
+              = link_to "LTthon", "/2014/ltthon.html"
+            %li
+              = link_to "生活発表会", "/2014/presentation.html"
+            %li
+              = link_to "Rails Girls Tokyo 4th", "/2014/rails-girls.html"
+            %li
+              = link_to "hirobaスペース", "/2014/hiroba-space.html"
 
     = javascript_include_tag "plugins", "script"
-
