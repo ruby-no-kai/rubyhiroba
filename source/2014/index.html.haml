@@ -14,6 +14,9 @@ layout    : layout
     .text
       %h2 the play field for Rubyists — <span class="date">Sep 21</span>
       %p at CyberAgent, Inc. SHIBUYA MARK CITY WEST 13th floor
+      %p
+        %a{ href: "http://frontrend.github.io/blog/shibuya-markcity/", target: "_blank"}
+          Access Info
   .conetnt
     .text
       :markdown
@@ -45,13 +48,30 @@ layout    : layout
       .nav-to-contents
         = link_to("Rails Girls Tokyo 4th", "/2014/rails-girls.html")
       .nav-to-contents
+        = link_to("toRuby & guRuby 出張版", "/2014/to-and-guRuby.html")
+      .nav-to-contents
         = link_to("Hirobaスペース", "/2014/hiroba-space.html")
+
+  .conetnt
+    .text
+      %h1
+        Sponsors
+      .sponsors
+        .sponsor
+          %a{ href: "https://www.cyberagent.co.jp/", target: "_blank" }
+            %img{ src: "/2014/images/sponsor/ca.png", alt: "cyberagent"}
+          %p
+            Places Sponsor
+        .sponsor
+          %a{ href: "http://spicelife.jp/", target: "_blank" }
+            %img{ src: "/2014/images/sponsor/spicelife.png", alt: "spicelife"}
+          %p
+            Novelty Sponsor
 
   .conetnt
     .text
       :markdown
         [RubyHiroba Anti Harassment Policy](anti-harassment-policy.html)
-
 
   .conetnt.footer
     .text

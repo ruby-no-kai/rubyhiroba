@@ -64,6 +64,9 @@ body
   height: 150px
   position: relative
   z-index: -10
+  padding-top: 40px
+  @media #{$middle}
+    padding-top: 0
   @media #{$small}
     height: 150px
   #header-cover
@@ -269,6 +272,23 @@ body
       background-color: rgba(215, 93, 88, 0.8)
     @media #{$small}
       font-size: 100%
+
+.sponsors
+  display: table
+.sponsor
+  display: table-cell
+  padding: 30px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  text-align: center
+  @media #{$small}
+    padding: 10px
+  img
+    width: 100%
+    &:hover
+      opacity: 0.6
+
 .footer
   padding: 2em 1em
   @media #{$middle}
