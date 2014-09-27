@@ -4,6 +4,8 @@ set :css_dir,    '2014/stylesheets'
 set :js_dir,     '2014/javascripts'
 set :images_dir, '2014/images'
 
+set :markdown_engine, :redcarpet
+
 ###
 # Compass
 ###
