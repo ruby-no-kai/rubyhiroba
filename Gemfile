@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~> 3.3.6"
+gem "middleman", "~> 3.4.1"
 
 # Compass plugins
 gem 'susy', "~> 1.0.8" # Susy
